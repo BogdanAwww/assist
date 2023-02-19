@@ -1,0 +1,36 @@
+.common-page {
+	max-width: 400px;
+
+	&__avatar {
+		text-align: center;
+
+		&-wrapper {
+			position: relative;
+			display: inline-block;
+			width: 120px;
+		}
+
+		&-edit {
+			margin-top: 16px;
+			text-align: center;
+		}
+	}
+
+	&__city {
+		margin: 8px 0;
+	}
+
+	&__submit {
+		text-align: center;
+		margin: 16px 0;
+	}
+
+	&__muted {
+		margin-top: 4px;
+		color: $color-text-secondary;
+	}
+
+	@media (max-width: 768px) {
+		max-width: none;
+	}
+}

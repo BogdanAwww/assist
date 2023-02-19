@@ -1,0 +1,39 @@
+#import "./shortUser.graphql"
+#import "./documentUpload.graphql"
+
+fragment ChatTextMessage on ChatTextMessage {
+	_id
+	room
+	author {
+		...ShortUser
+	}
+	type
+	content
+	content_en
+	isUnread
+	createdAt
+}
+
+fragment ChatFileMessage on ChatFileMessage {
+	_id
+	room
+	author {
+		...ShortUser
+	}
+	type
+	file {
+		...DocumentUpload
+	}
+	isUnread
+	createdAt
+}
+
+fragment ChatMessage on ChatMessageUnion {
+	... on ChatTextMessage {
+		...ChatTextMessage
+	}
+
+	... on ChatFileMessage {
+		...ChatFileMessage
+	}
+}

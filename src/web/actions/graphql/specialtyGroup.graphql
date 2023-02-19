@@ -1,0 +1,13 @@
+#import './fragments/specialtyGroup.graphql'
+#import './fragments/specialty.graphql'
+
+query specialtyGroup($id: String!) {
+	specialtyGroup(id: $id) {
+		...SpecialtyGroup
+		titles
+		specialties {
+			...Specialty
+			isFrequentlyUsed
+		}
+	}
+}

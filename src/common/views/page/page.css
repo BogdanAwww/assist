@@ -1,0 +1,44 @@
+$root: .page;
+
+.page {
+	&._fill {
+		display: flex;
+		height: 100vh;
+		flex-direction: column;
+		align-content: stretch;
+
+		> * {
+			flex-grow: 1;
+		}
+	}
+
+	&._with-header {
+		padding-top: $header-height;
+		box-sizing: border-box;
+	}
+
+	&__content {
+	}
+
+	&._padding {
+		padding-left: 16px;
+		padding-right: 16px;
+
+		@media (min-width: 768px) {
+			padding-left: $page-padding-x;
+			padding-right: $page-padding-x;
+		}
+	}
+
+	@media (max-width: 768px) {
+		display: block !important;
+
+		&._with-header {
+			padding-top: 64px;
+		}
+
+		&__content {
+			/* overflow: hidden; */
+		}
+	}
+}

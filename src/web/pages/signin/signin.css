@@ -1,0 +1,111 @@
+.signin {
+	width: 320px;
+
+	&__link {
+		@include link-underline();
+	}
+
+	&__dialog {
+		&__wrapper {
+			max-width: 450px;
+		}
+
+		&__agreements {
+			font-size: 1rem;
+			line-height: 25px;
+		}
+
+		&__button {
+			margin-top: 2rem;
+			margin-left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__title {
+		@include font-24-regular();
+	}
+
+	&__auth-with {
+		margin-top: 24px;
+
+		&-title {
+			@include font-12-regular();
+			color: $color-text-gray;
+		}
+
+		&-buttons {
+			display: flex;
+			justify-content: space-between;
+			font-size: 0;
+			line-height: 0;
+			color: $color-white;
+		}
+
+		&-button {
+			display: inline-block;
+			width: 150px;
+			margin-top: 12px;
+			border-radius: 8px;
+
+			&:hover {
+				cursor: pointer;
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+			}
+
+			@media (max-width: 812px) {
+				width: auto;
+
+				&:last-child {
+					margin-left: 8px;
+				}
+			}
+		}
+	}
+
+	&__or {
+		position: relative;
+		margin: 24px 0;
+		text-align: center;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			border-top: 1px solid $color-text-gray;
+		}
+
+		&-text {
+			display: inline-block;
+			position: relative;
+			z-index: 1;
+			padding: 0 16px;
+			background-color: $color-white;
+
+			@include font-16-regular();
+			text-transform: lowercase;
+		}
+	}
+
+	&__buttons {
+		margin-top: 36px;
+		text-align: center;
+	}
+
+	&__forgot-password {
+		text-align: right;
+		@include font-12-regular();
+		cursor: pointer;
+
+		&:hover a {
+			color: $color-text-red;
+		}
+	}
+
+	&__signup {
+		margin-top: 12px;
+	}
+}

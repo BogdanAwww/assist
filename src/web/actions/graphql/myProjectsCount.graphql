@@ -1,0 +1,7 @@
+{
+	myProjectsCount {
+		active
+		draft
+		archived
+	}
+}

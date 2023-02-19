@@ -1,0 +1,99 @@
+$root: .textarea;
+
+.textarea {
+	width: 100%;
+	padding: 14px 16px;
+	box-sizing: border-box;
+	border: 1px solid #d6d6d6;
+	border-radius: 4px;
+	resize: none;
+	font-family: inherit;
+	-webkit-appearance: none;
+
+	color: #8a8a8a;
+
+	&:focus {
+		border-color: #9a9a9a;
+		color: #484848;
+
+		&::placeholder {
+			color: #484848;
+		}
+	}
+
+	&::placeholder {
+		font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+			'Open Sans', 'Helvetica Neue', sans-serif;
+		color: #d6d6d6;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		color: #d6d6d6;
+		background-color: #f7f7f7;
+	}
+
+	&._invalid {
+		border-color: $color-red;
+	}
+
+	&__error {
+		margin-top: 8px;
+		@include font-12-regular();
+		color: $color-text-red;
+	}
+
+	&__wrap {
+		&._size_xs {
+			@include font-12-regular();
+
+			.textarea {
+				padding: 10px 10px;
+			}
+
+			&:not(._no-margin) {
+				margin-bottom: 8px;
+			}
+
+			input::placeholder {
+				@include font-12-regular();
+			}
+		}
+
+		&._size_small {
+			@include font-12-regular();
+
+			&:not(._no-margin) {
+				margin-bottom: 8px;
+			}
+
+			input::placeholder {
+				@include font-12-regular();
+			}
+		}
+
+		&._size_medium {
+			@include font-14-regular();
+
+			&:not(._no-margin) {
+				margin-bottom: 12px;
+			}
+
+			input::placeholder {
+				@include font-14-regular();
+			}
+		}
+
+		&._size_large {
+			@include font-16-regular();
+
+			&:not(._no-margin) {
+				margin-bottom: 12px;
+			}
+
+			input::placeholder {
+				@include font-16-regular();
+			}
+		}
+	}
+}

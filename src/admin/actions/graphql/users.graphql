@@ -1,0 +1,21 @@
+#import "@/web/actions/graphql/fragments/user.graphql"
+#import "@/web/actions/graphql/fragments/paginationInfo.graphql"
+#import "@/web/actions/graphql/fragments/specialty.graphql"
+
+query users($filter: JSON, $page: Int, $perPage: Int) {
+	users(filter: $filter, page: $page, perPage: $perPage) {
+		items {
+			...User
+			verified
+			subscription {
+				level
+				end
+			}
+			_info
+		}
+		count
+		pageInfo {
+			...PaginationInfo
+		}
+	}
+}

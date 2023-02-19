@@ -1,0 +1,136 @@
+.project-view {
+	&__section-title {
+		@include font-20-medium();
+		color: $color-text-secondary;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__hot {
+		margin-right: 8px;
+	}
+
+	&__type {
+		flex-grow: 1;
+		@include font-16-medium();
+		color: $color-text-red;
+	}
+
+	&__icons {
+		display: flex;
+		align-items: center;
+	}
+
+	&__premium {
+		margin-left: 8px;
+	}
+
+	&__non-commercial {
+		margin-left: 8px;
+		line-height: 0;
+	}
+
+	&__bookmark {
+		margin-left: 24px;
+		cursor: pointer;
+
+		&:hover {
+			color: $color-text-red;
+		}
+	}
+
+	&__separator {
+		margin: 8px 0;
+		border-top: 2px solid $color-text-red;
+	}
+
+	&__title {
+		margin-top: 24px;
+		@include font-18-medium();
+		color: $color-text-primary;
+	}
+
+	&__description {
+		width: 80%;
+		margin-top: 8px;
+		@include font-16-regular();
+		color: $color-text-secondary;
+	}
+
+	&__specialties {
+		margin-top: 24px;
+	}
+
+	&__period {
+		margin-top: 24px;
+	}
+
+	&__location {
+		margin-top: 24px;
+	}
+
+	&__specialty {
+		margin: 4px 0;
+		@include font-14-regular();
+	}
+
+	&__budget {
+		margin-top: 24px;
+
+		&-item {
+			margin: 4px 0;
+			display: flex;
+
+			&-title {
+				width: 180px;
+				@include font-12-regular();
+			}
+
+			&-value {
+				@include font-14-regular();
+			}
+		}
+	}
+
+	&__references {
+		margin-top: 24px;
+	}
+
+	&__reference {
+		user-select: none;
+	}
+
+	&__link {
+		@include link();
+
+		&-icon {
+			display: inline-block;
+			margin-left: 4px;
+		}
+	}
+
+	&__attachment {
+		margin-top: 24px;
+	}
+
+	&__test {
+		margin-top: 24px;
+
+		&-description {
+			margin-top: 8px;
+		}
+	}
+
+	&__created-at {
+		margin-top: 12px;
+		color: $color-text-secondary;
+	}
+
+	&__paycheck-comment:not(:empty) {
+		margin: 8px 0;
+	}
+}

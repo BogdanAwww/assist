@@ -1,0 +1,47 @@
+.notifications-popup {
+	position: fixed !important;
+	margin: 0 !important;
+	top: 0;
+	right: 0;
+
+	transform: translate(24px, 8px);
+
+	width: 280px;
+
+	&__content {
+		padding: 8px 8px;
+	}
+
+	&__notification {
+		padding: 12px 12px;
+		box-sizing: border-box;
+		word-break: break-word;
+		border-radius: 4px;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $color-background-light;
+		}
+	}
+
+	&__empty {
+		margin: 48px 0;
+		text-align: center;
+		color: $color-text-secondary;
+	}
+
+	&__title {
+		@include font-14-medium();
+		padding: 8px 12px;
+	}
+
+	&__more {
+		text-align: center;
+		padding: 8px 12px;
+
+		&-link {
+			@include link();
+			color: $color-text-secondary;
+		}
+	}
+}

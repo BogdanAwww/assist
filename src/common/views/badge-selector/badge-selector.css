@@ -1,0 +1,13 @@
+.badge-selector {
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 8px;
+		margin-bottom: 8px;
+	}
+
+	&__empty {
+		margin: 16px 0;
+		text-align: center;
+	}
+}

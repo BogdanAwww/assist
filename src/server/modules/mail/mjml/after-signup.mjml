@@ -1,0 +1,22 @@
+<mjml>
+	<mj-head>
+		<mj-title>Assist</mj-title>
+		<mj-attributes>
+			<mj-all font-family="Montserrat, Helvetica, Arial, sans-serif"></mj-all>
+			<mj-text font-size="14px" color="#000000" line-height="24px"></mj-text>
+		</mj-attributes>
+	</mj-head>
+	<mj-body background-color="#F2F2F2">
+		<mj-include path="./templates/header.mjml" />
+		<mj-section padding="20px 0px 0px 0" background-color="#FFFFFF">
+			<mj-column width="100%" padding="0 30px 0 30px">
+				<mj-text font-size="16px" font-weight="bold">Ваша почта подтверждена. Приступим?</mj-text>
+				<mj-text>Теперь можно приступить к основному процессу поиска проекта или специалистов.</mj-text>
+				<mj-button href="{{link}}" background-color="#f00" border-radius="32px">Сменить пароль</mj-button>
+				<mj-text padding="0 0 0 25px">Рады, что вы с нами</mj-text>
+				<mj-text padding="0 0 0 114px"> — команда Assist. 🎬</mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-include path="./templates/footer.mjml" />
+	</mj-body>
+</mjml>

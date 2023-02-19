@@ -1,0 +1,5 @@
+fragment Specialty on Specialty {
+	_id
+	title
+	titles
+}

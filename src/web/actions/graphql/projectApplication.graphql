@@ -1,0 +1,12 @@
+#import "./fragments/projectApplication.graphql"
+#import "./fragments/user.graphql"
+
+query projectApplication($id: String!) {
+	projectApplication(id: $id) {
+		...ProjectApplication
+		author {
+			...User
+		}
+		showTest
+	}
+}

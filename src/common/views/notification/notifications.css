@@ -1,0 +1,10 @@
+.notifications {
+	position: absolute;
+	top: 0;
+	right: 0;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 30;
+
+	width: 400px;
+}

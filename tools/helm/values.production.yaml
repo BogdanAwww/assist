@@ -1,0 +1,8 @@
+environment: production
+
+staticReplicaCount: 2
+serverReplicaCount: 2
+
+versionWeb: 0.6.18
+versionServer: 0.6.18
+versionSheduler: 0.6.4

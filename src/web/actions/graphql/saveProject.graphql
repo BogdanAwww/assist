@@ -1,0 +1,7 @@
+#import "./fragments/project.graphql"
+
+mutation saveProject($id: String!, $input: CreateProjectInput!) {
+	saveProject(id: $id, input: $input) {
+		...Project
+	}
+}

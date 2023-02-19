@@ -1,0 +1,3 @@
+mutation projectArchive($id: String!) {
+	projectArchive(id: $id)
+}

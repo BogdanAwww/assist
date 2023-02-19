@@ -1,0 +1,90 @@
+<mj-section padding="20px 0 0 0" background-color="#FFFFFF">
+	<mj-column width="100%" padding="0 30px 0 30px">
+		<mj-text font-size="12px" color="#8a8a8a">
+			Чтобы быть в курсе обновлений сервиса и получать полезную информацию от действующих специалистов индустрии —
+			подписывайтесь на наши соцсети:
+		</mj-text>
+	</mj-column>
+</mj-section>
+<!-- social icons -->
+<mj-section padding="0 0 20px 0" background-color="#FFFFFF">
+	<mj-column width="100%" padding="0 30px 0 30px">
+		<mj-social padding="0">
+			<mj-social-element
+				icon-size="32px"
+				padding="8px"
+				href="https://instagram.com/assist.video"
+				src="https://assist.ams3.cdn.digitaloceanspaces.com/static/instagram.png"
+			/>
+			<mj-social-element
+				icon-size="32px"
+				padding="8px"
+				href="https://facebook.com/assist.video/"
+				src="https://assist.ams3.cdn.digitaloceanspaces.com/static/facebook.png"
+			/>
+			<mj-social-element
+				icon-size="32px"
+				padding="8px"
+				href="https://t.me/assist_video"
+				src="https://assist.ams3.cdn.digitaloceanspaces.com/static/telegram.png"
+			/>
+			<mj-social-element
+				icon-size="32px"
+				padding="8px"
+				href="https://vc.ru/u/670582-assist"
+				src="https://assist.ams3.cdn.digitaloceanspaces.com/static/vc.png"
+			/>
+			<mj-social-element
+				icon-size="32px"
+				padding="8px"
+				href="https://zen.yandex.ru/id/5fdcdcb6b2eed0566f6c51bc"
+				src="https://assist.ams3.cdn.digitaloceanspaces.com/static/zen.png"
+			/>
+		</mj-social>
+	</mj-column>
+</mj-section>
+<!-- podcasts -->
+<mj-section padding="20px 0 0 0" background-color="#000">
+	<mj-column width="100%" padding="0 30px 0 30px">
+		<mj-text font-size="12px" color="#aaaaaa" align="center">Также слушайте наши подкасты:</mj-text>
+	</mj-column>
+</mj-section>
+<!-- podcasts icons -->
+<mj-section padding="0 0 20px 0" background-color="#000">
+	<mj-column width="100%" padding="0 30px 0 30px">
+		<mj-social padding="0">
+			<mj-social-element
+				icon-size="32px"
+				padding="8px"
+				href="https://music.yandex.ru/album/13764068"
+				src="https://assist.ams3.cdn.digitaloceanspaces.com/static/yandex-music.png"
+			/>
+			<mj-social-element
+				icon-size="32px"
+				padding="8px"
+				href="https://soundcloud.com/user-823155362"
+				src="https://assist.ams3.cdn.digitaloceanspaces.com/static/soundcloud.png"
+			/>
+			<mj-social-element
+				icon-size="32px"
+				padding="8px"
+				href="https://podcasts.apple.com/kz/podcast/assist-podcast/id1552225913"
+				src="https://assist.ams3.cdn.digitaloceanspaces.com/static/apple-podcast.png"
+			/>
+			<mj-social-element
+				icon-size="32px"
+				padding="8px"
+				href="https://castbox.fm/channel/id3794191?country=ru"
+				src="https://assist.ams3.cdn.digitaloceanspaces.com/static/castbox.png"
+			/>
+		</mj-social>
+	</mj-column>
+</mj-section>
+<!-- footer -->
+<mj-section padding="0 0 20px 0">
+	<mj-column>
+		<mj-text align="center" color="#9B9B9B" font-size="11px">
+			© Assist, 2021 All rights reserved.<br /><a href="%unsubscribe_url%" style="color: #9b9b9b">Unsubscribe</a>
+		</mj-text>
+	</mj-column>
+</mj-section>

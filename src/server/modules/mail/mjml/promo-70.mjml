@@ -1,0 +1,34 @@
+<mjml>
+	<mj-head>
+		<mj-title>Assist</mj-title>
+		<mj-attributes>
+			<mj-all font-family="Montserrat, Helvetica, Arial, sans-serif"></mj-all>
+			<mj-text font-size="14px" color="#000000" line-height="24px"></mj-text>
+		</mj-attributes>
+	</mj-head>
+	<mj-body background-color="#F2F2F2">
+		<mj-include path="./templates/header.mjml" />
+		<mj-section padding="20px 0px 20px 0" background-color="#FFFFFF">
+			<mj-column width="100%" padding="0 30px 0 30px">
+				<mj-text font-size="16px" font-weight="bold">
+					Поздравляем!<br />
+					Вы получаете промокод на 3 месяца подписки Premium со скидкой 70%.
+				</mj-text>
+				<mj-text>
+					Подписка по тарифу Premium позволяет воспользоваться всеми возможностями платформы без ограничений.
+				</mj-text>
+				<mj-text>Ваш промокод: {{code}}</mj-text>
+				<mj-text>
+					Чтобы получить свой подарок <a href="{{link}}">перейдите на страницу выбора подписки</a> и введите
+					промокод в одноименное поле в самом низу страницы.
+				</mj-text>
+				<mj-text>
+					<b>Внимание!</b> Это уникальный одноразовый промокод, который предназначен именно вам.
+				</mj-text>
+				<mj-text padding="16px 0 0 25px">Спасибо, что вы с нами 🖤</mj-text>
+				<mj-text padding="0 0 0 114px">— команда Assist. 🎬</mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-include path="./templates/footer.mjml" />
+	</mj-body>
+</mjml>

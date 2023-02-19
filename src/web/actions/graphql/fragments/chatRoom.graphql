@@ -1,0 +1,12 @@
+#import "./shortUser.graphql"
+#import "./chatMessage.graphql"
+
+fragment ChatRoom on ChatRoom {
+	_id
+	users {
+		...ShortUser
+	}
+	message {
+		...ChatMessage
+	}
+}

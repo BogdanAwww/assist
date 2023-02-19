@@ -1,0 +1,7 @@
+#import "./fragments/projectType.graphql"
+
+{
+	projectTypes {
+		...ProjectType
+	}
+}

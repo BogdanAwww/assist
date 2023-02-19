@@ -1,0 +1,56 @@
+.notification {
+	display: inline-flex;
+	align-items: center;
+	max-width: 320px;
+	margin-top: 16px;
+	margin-right: 16px;
+	animation: notification-slide 0.4s;
+
+	border-radius: 8px;
+	background-color: $color-white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+	@include font-12-regular();
+	pointer-events: all;
+
+	&__wrap {
+		text-align: right;
+	}
+
+	&__text {
+		padding: 12px 16px;
+		text-align: left;
+		user-select: none;
+		white-space: pre-wrap;
+	}
+
+	&._clickable {
+		cursor: pointer;
+	}
+
+	&__close {
+		width: 16px;
+		height: 16px;
+		padding: 16px;
+		margin-left: -16px;
+	}
+
+	&._view_error {
+		background-color: $color-text-red;
+		color: $color-white;
+	}
+
+	&._view_success {
+		background-color: #1e9c1e;
+		color: $color-white;
+	}
+}
+
+@keyframes notification-slide {
+	0% {
+		transform: translate(100%, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}

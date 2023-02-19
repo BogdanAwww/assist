@@ -1,0 +1,16 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"module": "commonjs",
+		"noEmit": false,
+		"sourceMap": true,
+		"declaration": false,
+		"declarationMap": false,
+		"skipLibCheck": true,
+		"noEmitOnError": true,
+		"rootDir": "./src/server",
+		"types": ["node"],
+		"outDir": "./build/server"
+	},
+	"include": ["src/server/**/*", "**/__tests__"]
+}

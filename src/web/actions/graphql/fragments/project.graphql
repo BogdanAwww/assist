@@ -1,0 +1,64 @@
+#import "./shortUser.graphql"
+#import "./specialty.graphql"
+#import "./city.graphql"
+#import "./documentUpload.graphql"
+
+fragment Project on Project {
+	_id
+	author {
+		...ShortUser
+		email
+		phone
+		website
+		contacts
+	}
+	type {
+		id
+		title
+	}
+	title
+	localeTitle
+	description
+	localeDescription
+	attachment {
+		...DocumentUpload
+	}
+	specialties {
+		...Specialty
+	}
+	period
+	onlyPremium
+	location {
+		...City
+	}
+	projectDate
+	endDate
+	hot
+	nonCommercial
+	budget
+	paycheck {
+		type
+		amount
+		overtime
+		comment
+		currency
+	}
+	references {
+		description
+		example
+		upload {
+			...DocumentUpload
+		}
+	}
+	test {
+		description
+		file {
+			...DocumentUpload
+		}
+	}
+	hasTest
+	status
+	applicationEst
+	isFavorite
+	createdAt
+}

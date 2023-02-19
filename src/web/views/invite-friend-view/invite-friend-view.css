@@ -1,0 +1,19 @@
+.invite-friend-view {
+	&__dialog {
+		width: 400px;
+
+		&-title {
+			@include font-18-medium();
+			margin-bottom: 24px;
+		}
+	}
+
+	&__buttons {
+		margin-top: 24px;
+		text-align: center;
+
+		.button + .button {
+			margin-left: 24px;
+		}
+	}
+}

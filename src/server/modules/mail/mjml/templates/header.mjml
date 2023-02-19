@@ -1,0 +1,6 @@
+<mj-section padding="10px 0 20px 0">
+	<mj-column>
+		<mj-image width="144px" src="https://assist.ams3.cdn.digitaloceanspaces.com/static/logo.png" padding-top="24px">
+		</mj-image>
+	</mj-column>
+</mj-section>

@@ -1,0 +1,91 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: static-{{ .Values.environment }}
+  labels:
+    app: static
+    env: {{ .Values.environment }}
+spec:
+  replicas: {{ .Values.staticReplicaCount }}
+  selector:
+    matchLabels:
+      app: static
+      env: {{ .Values.environment }}
+  template:
+    metadata:
+      labels:
+        app: static
+        env: {{ .Values.environment }}
+    spec:
+      containers:
+      - name: static-{{ .Values.environment }}
+        image: wantstobechak/assist:static-{{ .Values.versionWeb | default "latest" }}
+        imagePullPolicy: Always
+        env:
+        - name: NODE_ENV
+          value: "{{ .Values.environment }}"
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: docker
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-{{ .Values.environment }}
+  labels:
+    app: api
+    env: {{ .Values.environment }}
+spec:
+  replicas: {{ .Values.serverReplicaCount }}
+  selector:
+    matchLabels:
+      app: api
+      env: {{ .Values.environment }}
+  template:
+    metadata:
+      labels:
+        app: api
+        env: {{ .Values.environment }}
+    spec:
+      containers:
+      - name: api-{{ .Values.environment }}
+        image: wantstobechak/assist:server-{{ .Values.versionServer | default "latest" }}
+        imagePullPolicy: Always
+        env:
+        - name: NODE_ENV
+          value: "{{ .Values.environment }}"
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: docker
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scheduler
+  labels:
+    app: scheduler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scheduler
+  template:
+    metadata:
+      labels:
+        app: scheduler
+    spec:
+      containers:
+      - name: scheduler
+        image: wantstobechak/assist:server-{{ .Values.versionScheduler | default "latest" }}
+        imagePullPolicy: Always
+        env:
+        - name: NODE_ENV
+          value: "{{ .Values.environment }}"
+        command: ["npm"]
+        args: ["run", "scheduler"]
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: docker

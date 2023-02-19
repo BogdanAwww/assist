@@ -1,0 +1,71 @@
+.contractor-card {
+	&.card {
+		position: relative;
+		padding: 16px;
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+	}
+
+	&__avatar {
+		margin-right: 16px;
+	}
+
+	&__name {
+		@include font-14-medium();
+	}
+
+	&__specialties {
+		margin-top: 8px;
+	}
+
+	&__specialty {
+		margin: 4px 0;
+
+		&:not(._first) {
+			text-transform: lowercase;
+		}
+
+		&._active {
+			@include font-12-medium();
+			color: $color-text-red;
+		}
+
+		&._muted {
+			color: $color-text-secondary;
+		}
+	}
+
+	&__additional {
+		flex-grow: 1;
+		flex-shrink: 0;
+		min-width: 32px;
+		text-align: right;
+	}
+
+	&__favorite {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		padding: 8px;
+	}
+
+	&__recommendations {
+		margin-top: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+
+		&-title {
+			margin-right: 16px;
+			@include font-12-regular();
+			color: $color-text-red;
+		}
+	}
+
+	&__busy {
+		margin-top: 8px;
+	}
+}

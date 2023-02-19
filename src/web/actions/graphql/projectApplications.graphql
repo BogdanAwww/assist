@@ -1,0 +1,25 @@
+#import "./fragments/projectApplication.graphql"
+#import "./fragments/paginationInfo.graphql"
+#import "./fragments/user.graphql"
+
+query projectApplications($filter: ProjectApplicationsFilterInput!, $perPage: Int, $page: Int) {
+	projectApplications(filter: $filter, perPage: $perPage, page: $page) {
+		items {
+			...ProjectApplication
+			author {
+				...User
+			}
+			showTest
+		}
+		count {
+			unread
+			seen
+			test
+			accepted
+			invites
+		}
+		pageInfo {
+			...PaginationInfo
+		}
+	}
+}

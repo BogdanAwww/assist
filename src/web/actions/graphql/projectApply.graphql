@@ -1,0 +1,7 @@
+#import "./fragments/projectApplication.graphql"
+
+mutation projectApply($input: ProjectApplyInput!) {
+	projectApply(input: $input) {
+		...ProjectApplication
+	}
+}

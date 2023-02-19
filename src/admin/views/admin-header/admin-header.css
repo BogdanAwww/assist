@@ -1,0 +1,18 @@
+.admin-header {
+	&__icon-button {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 32px;
+		height: 32px;
+		transition: opacity 0.2s;
+
+		cursor: pointer;
+		&:hover {
+			color: $color-red-dark;
+		}
+		&:active {
+			color: $color-red;
+		}
+	}
+}

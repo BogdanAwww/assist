@@ -1,0 +1,14 @@
+.icon-test {
+	position: relative;
+	width: 12px;
+	height: 12px;
+	border: 1px solid $color-text-red;
+	border-radius: 2px;
+	color: $color-text-red;
+
+	&__tick {
+		position: relative;
+		left: 2px;
+		top: -4px;
+	}
+}

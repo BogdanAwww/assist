@@ -1,0 +1,14 @@
+{
+	"full": {"ru": "Полнометражный фильм", "en": "Feature movie"},
+	"short": {"ru": "Короткометражный фильм", "en": "Short movie"},
+	"music": {"ru": "Музыкальный клип", "en": "Music video"},
+	"promo": {"ru": "Рекламный ролик", "en": "Ads"},
+	"vlog": {"ru": "Влог", "en": "Vlog"},
+	"news": {"ru": "Репортажная съемка", "en": "Interview"},
+	"youtube": {"ru": "Шоу для YouTube", "en": "YouTube show"},
+	"tiktok": {"ru": "TikTok", "en": "TikTok"},
+	"instagram": {"ru": "IGTV (Instagram)", "en": "IGTV Real"},
+	"fashion": {"ru": "Fashion film", "en": "Fashion film"},
+	"backstage": {"ru": "Бэкстейдж", "en": "Backstage"},
+	"other": {"ru": "Другое", "en": "Other"}
+}

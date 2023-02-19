@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <style>
+            .dda,.ddd{fill:none;}
+            .dda{stroke:#d6d6d6;stroke-width:2px;}
+            .ddb{fill:#d96b6b;font-size:18px;font-family:Raleway-SemiBold, Raleway;font-weight:600;}
+            .ddc{stroke:none;}
+        </style>
+    </defs>
+    <g transform="translate(-957 -3920)">
+        <g transform="translate(297 3616)">
+            <g class="dda" transform="translate(660 304)">
+                <circle class="ddc" cx="16" cy="16" r="16"/>
+                <circle class="ddd" cx="16" cy="16" r="15"/>
+            </g>
+            <text class="ddb" transform="translate(670.204 326.333)">
+                <tspan x="0" y="0">$</tspan>
+            </text>
+            <line class="dda" x1="22.667" y2="22.667" transform="translate(664.667 308.667)"/>
+        </g>
+    </g>
+</svg>

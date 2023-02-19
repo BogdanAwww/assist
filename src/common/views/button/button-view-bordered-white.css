@@ -1,0 +1,32 @@
+$root: .button;
+
+$(root) {
+	&._view_bordered-white {
+		&:not(._disabled) {
+			color: $color-white;
+			border: 2px solid currentColor;
+			background-color: transparent;
+		}
+
+		$(root)__text,
+		$(root)__icon {
+			color: currentColor;
+		}
+
+		&:not(._disabled):hover {
+			color: $color-text-primary;
+			border-color: $color-white;
+			background-color: $color-white;
+		}
+
+		&._disabled {
+			background-color: transparent;
+			color: #d9d9d9;
+
+			$(root)__text,
+			$(root)__icon {
+				color: #9a9a9a;
+			}
+		}
+	}
+}

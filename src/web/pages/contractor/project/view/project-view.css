@@ -1,0 +1,102 @@
+.contractor-project-view-page {
+	&__buttons {
+		margin-top: 32px;
+		text-align: center;
+
+		.button + .button {
+			margin-left: 24px;
+		}
+	}
+
+	&__author-info {
+		display: flex;
+		align-items: center;
+		margin-top: 16px;
+	}
+
+	&__author-avatar {
+		flex-shrink: 0;
+		cursor: pointer;
+	}
+
+	&__author-name {
+		width: 160px;
+		margin-left: 16px;
+		cursor: pointer;
+	}
+
+	&__author-contacts {
+		margin-left: 16px;
+	}
+
+	&__prompt {
+		margin: 100px 40px;
+		text-align: center;
+
+		&-text {
+			margin-bottom: 16px;
+		}
+
+		.button {
+			margin-bottom: 16px;
+		}
+
+		.button + .button {
+			margin-left: 16px;
+		}
+	}
+
+	&__congratulation {
+		&__wrapper {
+			max-width: 450px;
+			margin: 50px 30px;
+		}
+
+		&__title {
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 32px;
+			text-align: center;
+			margin-bottom: 2rem;
+			text-transform: uppercase;
+		}
+
+		&__subtitle {
+			text-align: left;
+			font-size: 16px;
+			line-height: 22px;
+			margin-bottom: 1.5rem;
+		}
+
+		&__list-title {
+			color: red;
+			font-size: 1rem;
+			text-transform: uppercase;
+			margin-bottom: 1rem;
+			line-height: 30px;
+		}
+
+		&__list {
+			list-style: disc;
+			font-size: 0.8rem;
+			line-height: 30px;
+			padding-left: 22px;
+			margin-bottom: 25px;
+			&__item {
+				&::marker {
+					color: red;
+					font-size: 1.3rem;
+				}
+			}
+		}
+		&__button {
+			margin-top: 1rem;
+			margin-left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+b {
+	font-weight: bold;
+}

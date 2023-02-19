@@ -1,0 +1,12 @@
+#import "./fragments/shortUser.graphql"
+#import "./fragments/specialty.graphql"
+
+query getPossibleContractors($projectId: String) {
+	getPossibleContractors(projectId: $projectId) {
+		...ShortUser
+		specialties {
+			...Specialty
+		}
+		isFavorite
+	}
+}

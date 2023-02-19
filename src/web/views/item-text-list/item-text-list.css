@@ -1,0 +1,19 @@
+.item-text-list {
+	margin: 16px 0;
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		user-select: none;
+	}
+
+	&__remove {
+		line-height: 0;
+		cursor: pointer;
+
+		&:hover {
+			color: $color-red-dark;
+		}
+	}
+}

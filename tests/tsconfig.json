@@ -1,0 +1,15 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"target": "es2015",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"noImplicitReturns": false,
+		"esModuleInterop": true,
+
+		"types": ["node", "jest", "rewire"]
+	},
+	"include": ["../src/**/*.test.ts", "index.d.ts", "."],
+	"exclude": []
+}

@@ -1,0 +1,20 @@
+---
+clusterName: "es"
+replicas: 1
+
+extraEnvs:
+  - name: ELASTIC_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: elastic-config-credentials
+        key: espwd
+  - name: ELASTIC_USERNAME
+    valueFrom:
+      secretKeyRef:
+        name: elastic-config-credentials
+        key: assistes
+
+esConfig:
+  elasticsearch.yml: |
+    xpack.security.enabled: true
+    path.data: /usr/share/elasticsearch/data

@@ -1,0 +1,8 @@
+.icon-close {
+	transition: color 0.2s;
+	color: black;
+}
+
+.icon-close:hover {
+	color: red;
+}

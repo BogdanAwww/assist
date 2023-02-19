@@ -1,0 +1,3 @@
+mutation approveApplication($id: String!) {
+	approveApplication(id: $id)
+}

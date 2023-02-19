@@ -1,0 +1,14 @@
+{
+	"files": ["./app.ts"],
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"lib": ["es2017"],
+		"module": "commonjs",
+		"outDir": "../../build/server",
+		"esModuleInterop": true,
+		"baseUrl": "../",
+		"types": ["node", "jest"]
+	},
+	"include": ["./**/*.ts"],
+	"exclude": ["../../types/react.d.ts"]
+}

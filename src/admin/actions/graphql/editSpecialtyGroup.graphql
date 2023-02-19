@@ -1,0 +1,3 @@
+mutation editSpecialtyGroup($id: String, $titles: JSON!) {
+	editSpecialtyGroup(id: $id, titles: $titles)
+}

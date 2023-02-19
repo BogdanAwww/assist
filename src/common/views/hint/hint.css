@@ -1,0 +1,93 @@
+$root: .hint;
+$arrowSize: 8px;
+$margin: 16px;
+
+.hint {
+	position: fixed;
+	z-index: 999;
+	/* width: 100px; */
+	/* height: 100px; */
+	/* border: 1px solid #f00; */
+
+	pointer-events: none;
+
+	&__content {
+		max-width: 200px;
+		padding: 12px 16px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		border-radius: 4px;
+		background-color: #555;
+		color: #fff;
+	}
+
+	&__arrow {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-style: solid;
+	}
+
+	&._arrange_top {
+		transform: translate(-50%, -100%);
+
+		$(root)__content {
+			margin-bottom: $margin;
+		}
+
+		$(root)__arrow {
+			bottom: $margin - $arrowSize;
+			left: 50%;
+			transform: translate(-50%, 0);
+			border-width: $arrowSize 6px 0 6px;
+			border-color: #555 transparent transparent transparent;
+		}
+	}
+
+	&._arrange_bottom {
+		transform: translate(-50%, 0);
+
+		$(root)__content {
+			margin-top: $margin;
+		}
+
+		$(root)__arrow {
+			top: $margin - $arrowSize;
+			left: 50%;
+			transform: translate(-50%, 0);
+			border-width: 0 6px $arrowSize 6px;
+			border-color: transparent transparent #555 transparent;
+		}
+	}
+
+	&._arrange_right {
+		transform: translate(0, -50%);
+
+		$(root)__content {
+			margin-left: $margin;
+		}
+
+		$(root)__arrow {
+			top: 50%;
+			left: $margin - $arrowSize;
+			transform: translate(0, -50%);
+			border-width: 6px $arrowSize 6px 0;
+			border-color: transparent #555 transparent transparent;
+		}
+	}
+
+	&._arrange_left {
+		transform: translate(-100%, -50%);
+
+		$(root)__content {
+			margin-right: $margin;
+		}
+
+		$(root)__arrow {
+			top: 50%;
+			right: $margin - $arrowSize;
+			transform: translate(0, -50%);
+			border-width: 6px 0 6px $arrowSize;
+			border-color: transparent transparent transparent #555;
+		}
+	}
+}

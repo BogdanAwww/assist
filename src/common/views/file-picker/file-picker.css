@@ -1,0 +1,12 @@
+.file-picker {
+	position: fixed;
+	z-index: 9999;
+	left: -1000px;
+	top: -1000px;
+
+	display: block;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
+}

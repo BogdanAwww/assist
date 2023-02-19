@@ -1,0 +1,7 @@
+#import "../fragments/chatMessage.graphql"
+
+subscription {
+	messages {
+		...ChatMessage
+	}
+}

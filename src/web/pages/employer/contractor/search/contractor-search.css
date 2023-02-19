@@ -1,0 +1,54 @@
+.contractor-search-page {
+	&__specialties-button {
+		margin-top: 16px;
+		text-align: center;
+	}
+
+	&__only-premium {
+		margin-top: 32px;
+	}
+
+	&__submit {
+		margin-top: 32px;
+		text-align: center;
+	}
+
+	&__count {
+		margin-bottom: 16px;
+		text-align: right;
+	}
+
+	&__empty {
+		padding: 0 32px;
+		max-width: 200px;
+		margin: 120px auto;
+		text-align: center;
+		color: $color-text-secondary;
+	}
+
+	&__disclaimer {
+		padding: 0 32px;
+		width: 80%;
+		max-width: 400px;
+		margin: 120px auto;
+
+		@include font-14-regular();
+		color: $color-text-secondary;
+
+		p {
+			margin: 12px 0;
+		}
+	}
+
+	&__count {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@media (max-width: 768px) {
+		&__count {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}

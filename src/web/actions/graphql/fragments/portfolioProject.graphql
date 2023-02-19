@@ -1,0 +1,40 @@
+#import "./shortUser.graphql"
+#import "./documentUpload.graphql"
+
+fragment PortfolioProject on PortfolioProject {
+	_id
+	author {
+		...ShortUser
+	}
+	title
+	localeTitle
+	description
+	localeDescription
+	link
+	attachment {
+		...DocumentUpload
+	}
+	thumbnail
+	iframe
+	type {
+		id
+		title
+	}
+	specialty {
+		_id
+		title
+	}
+	responsibilities
+	localeResponsibilities
+	participants {
+		user {
+			...ShortUser
+		}
+		name
+		specialty {
+			_id
+			title
+		}
+	}
+	views
+}

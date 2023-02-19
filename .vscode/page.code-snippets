@@ -1,0 +1,26 @@
+{
+    "React View Component": {
+        "prefix": "AssistComponent",
+        "body": [
+"import './view.css';",
+"",
+"import * as React from 'react';",
+"import classname from '@/common/core/classname';",
+"",
+"const b = classname('view');",
+"",
+"class View extends React.PureComponent {",
+"    render(): React.ReactNode {",
+"        return (",
+"            <div className={b()}>",
+"",
+"            </div>",
+"        );",
+"    }",
+"}",
+"",
+"export default View;",
+""
+        ]
+    }
+}

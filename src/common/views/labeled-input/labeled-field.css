@@ -1,0 +1,46 @@
+.labeled-field {
+	width: 100%;
+	&__wrap {
+		display: flex;
+		flex-wrap: nowrap;
+		/* align-items: center; */
+	}
+
+	&__label {
+		flex-grow: 0;
+		flex-shrink: 0;
+		text-align: right;
+		padding-right: 12px;
+		padding-top: 15px;
+	}
+
+	&__input {
+		flex-grow: 1;
+
+		input {
+			margin: 0 !important;
+		}
+	}
+
+	&._size_small {
+		margin-bottom: 8px;
+		@include font-12-regular();
+	}
+
+	&._size_medium {
+		margin-bottom: 12px;
+		@include font-14-regular();
+	}
+
+	&._size_large {
+		margin-bottom: 12px;
+		@include font-16-regular();
+	}
+
+	&__error {
+		padding-left: 12px;
+		margin-top: 8px;
+		@include font-12-regular();
+		color: $color-text-red;
+	}
+}

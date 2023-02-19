@@ -1,0 +1,13 @@
+.signin {
+	width: 320px;
+
+	&__title {
+		margin-bottom: 32px;
+		@include font-18-medium(): ;
+	}
+
+	&__buttons {
+		margin-top: 24px;
+		text-align: center;
+	}
+}

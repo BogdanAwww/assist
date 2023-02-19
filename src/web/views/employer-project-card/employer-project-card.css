@@ -1,0 +1,151 @@
+.employer-project-card {
+	user-select: none;
+
+	&__head {
+		display: flex;
+		align-items: center;
+
+		&-line {
+			flex-grow: 1;
+			margin: 0 8px;
+			border-top: 2px solid $color-text-red;
+		}
+	}
+
+	&__specialty {
+		@include font-14-medium();
+		color: $color-text-primary;
+		@include text-ellipsis();
+	}
+
+	&__period {
+		flex-shrink: 0;
+		width: 60px;
+		@include font-12-regular();
+		color: $color-text-red;
+	}
+
+	&__type {
+		margin-top: 16px;
+		display: flex;
+		align-items: center;
+		color: $color-text-red;
+
+		&-title:not(:only-child) {
+			margin-left: 4px;
+		}
+	}
+
+	&__info {
+		margin-top: 8px;
+	}
+
+	&__info-head {
+		display: flex;
+		align-items: center;
+	}
+
+	&__title {
+		@include font-16-medium();
+		color: $color-text-primary;
+		@include text-ellipsis();
+	}
+
+	&__options {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		margin-top: 8px;
+	}
+
+	&__premium {
+		margin-right: 8px;
+	}
+
+	&__icon-commercial {
+		margin-right: 8px;
+		line-height: 0px;
+	}
+
+	&__non-commercial {
+		color: $color-text-red;
+	}
+
+	&__budget {
+		&-item {
+			&-title {
+				display: inline-block;
+				@include font-12-regular();
+				color: $color-text-red;
+			}
+
+			&-value {
+				display: inline-block;
+				margin-left: 8px;
+				@include font-14-regular();
+			}
+		}
+	}
+
+	&__applications {
+		margin-top: 16px;
+
+		&-title {
+			color: $color-text-red;
+		}
+
+		&-info {
+			margin-top: 4px;
+			display: flex;
+			justify-content: space-between;
+			@include font-12-regular();
+		}
+
+		&-new,
+		&-seen {
+			color: $color-text-secondary;
+
+			span {
+				display: inline-block;
+				margin-left: 4px;
+				@include font-16-regular();
+			}
+		}
+
+		&-new span {
+			color: $color-text-red;
+		}
+
+		&-seen span {
+			color: $color-text-primary;
+		}
+
+		&-separator {
+			border-left: 1px solid $color-text-secondary;
+		}
+	}
+
+	&__footer {
+		margin-top: 16px;
+		display: flex;
+		align-items: center;
+
+		&-line {
+			flex-grow: 1;
+			margin: 0 8px;
+			border-top: 2px solid $color-text-primary;
+		}
+
+		span {
+			@include font-14-regular();
+		}
+
+		b {
+			font-weight: bold;
+		}
+	}
+
+	&__term {
+		color: $color-text-red;
+	}
+}

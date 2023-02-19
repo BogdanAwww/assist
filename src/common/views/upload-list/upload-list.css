@@ -1,0 +1,18 @@
+.upload-list {
+	&__file {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		margin: 8px 0;
+
+		&-remove {
+			line-height: 0;
+			cursor: pointer;
+
+			&:hover {
+				color: $color-red-dark;
+			}
+		}
+	}
+}

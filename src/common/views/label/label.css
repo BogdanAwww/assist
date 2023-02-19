@@ -1,0 +1,19 @@
+.label {
+	@include font-12-medium();
+	color: $color-text-primary;
+
+	margin: 8px 0;
+
+	&._muted {
+		color: $color-text-secondary;
+	}
+
+	&._red {
+		color: $color-text-primary;
+	}
+
+	&__required {
+		color: $color-text-red;
+		margin-left: 2px;
+	}
+}

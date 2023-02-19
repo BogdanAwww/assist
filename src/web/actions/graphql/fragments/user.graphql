@@ -1,0 +1,51 @@
+#import "./country.graphql"
+#import "./city.graphql"
+#import "./specialty.graphql"
+
+fragment User on User {
+	_id
+	email
+	username
+	description
+	localeDescription
+	firstName
+	localeFirstname
+	lastName
+	localeLastname
+	fullName
+	localeFullname
+	avatar {
+		_id
+		urlTemplate
+	}
+	gravatar
+	city {
+		...City
+	}
+	country {
+		...Country
+	}
+	website
+	phone
+	contacts
+	specialties {
+		...Specialty
+	}
+	isFavorite
+	isVerified
+	verified
+	subscription {
+		level
+	}
+	isRecommended
+	busy
+	hasPortfolio
+	recommendations {
+		count
+		last {
+			avatar {
+				urlTemplate
+			}
+		}
+	}
+}

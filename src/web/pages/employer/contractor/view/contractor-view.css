@@ -1,0 +1,26 @@
+.contractor-view-page {
+	&__buttons {
+		margin-top: 48px;
+		text-align: center;
+	}
+
+	&__list {
+		&-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__empty {
+		width: 80%;
+		margin: 120px auto;
+		text-align: center;
+		color: $color-text-secondary;
+	}
+
+	&__subscription {
+		margin-top: 16px;
+	}
+}

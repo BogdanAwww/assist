@@ -1,0 +1,64 @@
+.specialty-setting {
+	display: flex;
+	align-items: center;
+	padding: 8px 0;
+
+	color: #d8d8d8;
+	user-select: none;
+
+	&__icon {
+		display: flex;
+		width: 24px;
+		height: 24px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 100%;
+		background-color: #e1e1e1;
+		color: $color-white;
+
+		transform: rotate(45deg);
+		transition: transform 0.3s, background-color 0.3s, color 0.3s;
+	}
+
+	&__text {
+		margin-left: 8px;
+		@include font-14-regular();
+		transition: color 0.3s;
+	}
+
+	b {
+		font-weight: bold;
+	}
+
+	&:not(._selected):hover {
+		color: $color-black;
+		cursor: pointer;
+	}
+
+	&._selected {
+		color: $color-black;
+	}
+
+	&._selected & {
+		&__icon {
+			color: $color-text-secondary;
+			background-color: $color-background-light;
+			transform: rotate(0deg);
+			cursor: pointer;
+		}
+	}
+
+	&:not(._selected):hover & {
+		&__icon {
+			color: $color-white;
+			background-color: $color-red-dark;
+		}
+	}
+
+	&._selected & {
+		&__icon:hover {
+			color: $color-white;
+			background-color: $color-red-dark;
+		}
+	}
+}

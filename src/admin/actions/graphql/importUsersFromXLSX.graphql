@@ -1,0 +1,3 @@
+mutation importUsersFromXLSX($id: String!) {
+	importUsersFromXLSX(id: $id)
+}

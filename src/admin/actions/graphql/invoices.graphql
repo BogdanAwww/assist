@@ -1,0 +1,20 @@
+#import "@/web/actions/graphql/fragments/user.graphql"
+#import "@/web/actions/graphql/fragments/paginationInfo.graphql"
+
+query invoices($page: Int, $perPage: Int) {
+	invoices(page: $page, perPage: $perPage) {
+		items {
+			user {
+				...User
+			}
+			type
+			data
+			status
+			updatedAt
+		}
+		count
+		pageInfo {
+			...PaginationInfo
+		}
+	}
+}

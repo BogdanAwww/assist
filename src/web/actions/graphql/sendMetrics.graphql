@@ -1,0 +1,3 @@
+mutation sendMetrics($type: String!, $data: JSON!) {
+	sendMetrics(type: $type, data: $data)
+}

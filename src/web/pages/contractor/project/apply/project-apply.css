@@ -1,0 +1,100 @@
+.project-apply-page {
+	&__works-disclaimer {
+		margin: 8px 0;
+		color: $color-text-secondary;
+	}
+
+	&__buttons {
+		margin-top: 32px;
+		text-align: center;
+
+		.button + .button {
+			margin-left: 24px;
+		}
+	}
+
+	&__test {
+		&-disclaimer {
+			display: flex;
+			margin-bottom: 16px;
+		}
+
+		&-icon {
+			flex-shrink: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 32px;
+			height: 32px;
+			border-radius: 100%;
+			border: 1px solid $color-text-red;
+			margin-right: 16px;
+			background-color: #f7f7f7;
+		}
+
+		&-title {
+			@include font-14-regular();
+			color: $color-text-red;
+		}
+
+		&-text {
+			margin-top: 4px;
+			color: $color-text-secondary;
+		}
+	}
+
+	&__success {
+		text-align: center;
+
+		&-card {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 136px;
+
+			@include font-16-regular();
+			color: $color-white;
+		}
+
+		&-title {
+			margin-top: 48px;
+			@include font-20-regular();
+			color: $color-text-primary;
+		}
+
+		&-description {
+			margin-top: 8px;
+			@include font-14-regular();
+			color: $color-text-secondary;
+		}
+
+		&-buttons {
+			margin-top: 48px;
+			text-align: center;
+		}
+	}
+
+	&__my-applications {
+		margin-top: 16px;
+	}
+
+	&__upper {
+		margin: 4px 0;
+		@include font-20-medium();
+		text-transform: uppercase;
+	}
+
+	&__subscription-dialog {
+		width: 400px;
+	}
+
+	&__dialog-text {
+		color: $color-text-secondary;
+	}
+
+	&__dialog-button {
+		margin-top: 16px;
+		text-align: right;
+	}
+}

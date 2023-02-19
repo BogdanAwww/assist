@@ -1,0 +1,8 @@
+fragment ProjectApplication on ProjectApplication {
+	_id
+	description
+	links
+	budget
+	shiftCost
+	status
+}

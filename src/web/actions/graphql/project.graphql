@@ -1,0 +1,11 @@
+#import "./fragments/project.graphql"
+#import "./fragments/projectApplication.graphql"
+
+query project($id: String) {
+	project(id: $id) {
+		...Project
+		application {
+			...ProjectApplication
+		}
+	}
+}

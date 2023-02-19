@@ -1,0 +1,21 @@
+$root: .button;
+
+$(root) {
+	&._view_secondary {
+		&:not(._disabled) {
+			color: #bbbbbb;
+			border: 2px solid currentColor;
+			background-color: currentColor;
+		}
+
+		$(root)__text,
+		$(root)__icon {
+			color: #fff;
+		}
+
+		&:not(._disabled):hover {
+			color: #484848;
+			background-color: currentColor;
+		}
+	}
+}

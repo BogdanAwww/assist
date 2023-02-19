@@ -1,0 +1,98 @@
+.chat-room-list {
+	&__room {
+		display: flex;
+		padding: 16px 8px;
+		cursor: pointer;
+		border-radius: 4px;
+
+		&._active {
+			background-color: rgba(255, 0, 0, 0.04);
+		}
+
+		& + & {
+			border-top: 1px solid $color-background-light;
+		}
+
+		&:not(._active):hover {
+			background-color: rgba(0, 0, 0, 0.03);
+		}
+	}
+
+	&__avatar {
+		flex-grow: 0;
+		flex-shrink: 0;
+	}
+
+	&__info {
+		margin-left: 16px;
+		flex-grow: 1;
+	}
+
+	&__head {
+		position: relative;
+		padding-top: 4px;
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+
+		&._unread:after {
+			content: '';
+			display: block;
+			position: absolute;
+			right: 4px;
+			bottom: -13px;
+			width: 4px;
+			height: 4px;
+			background-color: $color-background-dark;
+			border-radius: 50%;
+		}
+	}
+
+	&__user {
+		@include font-14-medium();
+	}
+
+	&__date {
+		@include font-12-regular();
+		color: $color-text-secondary;
+	}
+
+	&__message {
+		margin-top: 4px;
+		padding-right: 10px;
+		@include font-12-regular();
+		@include text-clamp(14px, 3);
+		color: $color-text-secondary;
+	}
+
+	&__empty {
+		width: 80%;
+		margin: 64px auto;
+		text-align: center;
+		color: $color-text-secondary;
+	}
+
+	&__error {
+		text-align: center;
+		color: $color-text-secondary;
+		width: 80%;
+		margin: 64px auto;
+	}
+
+	&__search {
+		&-button {
+			position: absolute;
+			top: 0;
+			right: 4px;
+			display: flex;
+			align-items: center;
+			padding: 0 16px;
+			height: 100%;
+			pointer-events: none;
+
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}
+}

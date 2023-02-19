@@ -1,0 +1,92 @@
+.contractor-project-card {
+	&.card {
+		padding: 16px;
+	}
+
+	&__head {
+		display: flex;
+	}
+
+	&__additional {
+		flex-grow: 1;
+		flex-shrink: 1;
+		text-align: right;
+		margin-left: 8px;
+	}
+
+	&__title {
+		@include font-16-medium();
+		color: $color-text-primary;
+		@include text-ellipsis();
+	}
+
+	&__hot {
+		margin-left: 8px;
+		margin-right: 24px;
+	}
+
+	&__line {
+		margin: 8px 0;
+		border-top: 2px solid $color-text-red;
+	}
+
+	&__period {
+		@include font-12-regular();
+		color: $color-text-red;
+	}
+
+	&__type {
+		display: flex;
+		align-items: center;
+		color: $color-text-red;
+	}
+
+	&__description {
+		margin-top: 4px;
+		color: $color-text-secondary;
+		@include font-12-regular();
+		@include text-clamp(3, 14px);
+		height: 42px;
+	}
+
+	&__options {
+		&-line {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 8px;
+		}
+	}
+
+	&__icon-commercial {
+		margin-right: 8px;
+		line-height: 0px;
+	}
+
+	&__non-commercial {
+		color: $color-text-red;
+	}
+
+	&__premium {
+		margin-right: 8px;
+	}
+
+	&__budget {
+		display: flex;
+		align-items: center;
+
+		&-item {
+			&-title {
+				display: inline-block;
+				@include font-12-regular();
+				color: $color-text-red;
+			}
+
+			&-value {
+				display: inline-block;
+				margin-left: 8px;
+				@include font-14-regular();
+			}
+		}
+	}
+}

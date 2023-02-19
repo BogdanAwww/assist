@@ -1,0 +1,29 @@
+fragment ShortUser on User {
+	_id
+	username
+	firstName
+	localeFirstname
+	lastName
+	localeLastname
+	fullName
+	localeFullname
+	avatar {
+		_id
+		urlTemplate
+	}
+	gravatar
+	isRecommended
+	recommendations {
+		count
+		last {
+			avatar {
+				urlTemplate
+			}
+		}
+	}
+	isPremium
+	subscription {
+		level
+	}
+	busy
+}

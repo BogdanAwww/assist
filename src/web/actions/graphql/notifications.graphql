@@ -1,0 +1,40 @@
+#import "./fragments/shortUser.graphql"
+#import "./fragments/specialty.graphql"
+#import "./fragments/paginationInfo.graphql"
+
+{
+	notifications {
+		count {
+			unread
+		}
+		items {
+			_id
+			type
+			subjects {
+				key
+				original
+				value {
+					... on User {
+						...ShortUser
+					}
+					... on Project {
+						_id
+						title
+						localeTitle
+					}
+					... on Specialty {
+						...Specialty
+					}
+					... on ProjectApplication {
+						_id
+					}
+				}
+			}
+			isUnread
+			ts
+		}
+		pageInfo {
+			...PaginationInfo
+		}
+	}
+}

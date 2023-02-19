@@ -1,0 +1,12 @@
+#import './fragments/specialtyGroup.graphql'
+#import './fragments/specialty.graphql'
+
+{
+	specialtyGroups {
+		...SpecialtyGroup
+		specialties {
+			...Specialty
+			isFrequentlyUsed
+		}
+	}
+}

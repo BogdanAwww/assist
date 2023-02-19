@@ -1,0 +1,7 @@
+#import "./fragments/portfolioProject.graphql"
+
+mutation createPortfolioProject($input: CreatePortfolioProjectInput!) {
+	createPortfolioProject(input: $input) {
+		...PortfolioProject
+	}
+}

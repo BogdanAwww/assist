@@ -1,0 +1,14 @@
+.fullness-warning-view {
+	&__dialog {
+		max-width: 480px;
+
+		b {
+			font-weight: 600;
+		}
+	}
+
+	&__buttons {
+		margin-top: 16px;
+		text-align: right;
+	}
+}

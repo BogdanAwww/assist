@@ -1,0 +1,25 @@
+.user-recommendations {
+	display: flex;
+	align-items: center;
+
+	&__list {
+		line-height: 0;
+		height: 32px;
+		overflow: hidden;
+	}
+
+	&__avatar {
+		display: inline-block;
+
+		&:not(:first-child) {
+			margin-left: -8px;
+		}
+	}
+
+	&__count {
+		margin-left: 16px;
+
+		@include font-14-regular();
+		color: $color-text-red;
+	}
+}

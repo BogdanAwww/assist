@@ -1,0 +1,80 @@
+image: node:14.15.0-alpine
+
+stages:
+  - build
+  - test
+  - docker
+  - deploy
+
+cache:
+  key:
+    files:
+      - package-lock.json
+  paths:
+    - node_modules
+
+build:
+  stage: build
+  before_script:
+    - apk add make
+  script:
+    - npm install
+    - make build-static
+    - make build-server
+  artifacts:
+    paths:
+      - build
+    expire_in: 1 hour
+  only:
+    - tags
+
+test:
+  stage: test
+  needs: [build]
+  before_script:
+    - apk add make
+  script:
+    - make test
+  only:
+    - tags
+  when: on_success
+
+docker:
+  stage: docker
+  needs: [build]
+  image: docker:19.03.8
+  services:
+    - docker:dind
+  variables:
+    DOCKER_TLS_CERTDIR: ""
+  before_script:
+    - apk add make
+    - if [[ "$CI_COMMIT_BRANCH" = "master" ]]; then ENV="production"; else ENV="$CI_COMMIT_BRANCH"; fi
+  script:
+    - echo $ENV_CONFIG
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - make docker-static
+    - make docker-server
+  only:
+    - tags
+  when: on_success
+
+deploy:
+  stage: deploy
+  needs: [docker]
+  image:
+    name: alpine/helm:3.5.3
+    entrypoint: [""]
+  before_script:
+    - apk add make
+    - mkdir ~/.kube
+    - cat "$KUBECONFIG" > ~/.kube/config
+  script:
+    - export ENV=$(if [[ "$CI_COMMIT_BRANCH" = "master" ]]; then echo "production"; else echo "$CI_COMMIT_BRANCH"; fi)
+    - export VERSION=$CI_COMMIT_TAG
+    - echo $ENV
+    - echo $VERSION
+    - make deploy
+  only:
+    - tags
+  when: on_success

@@ -1,0 +1,64 @@
+.users-list-page {
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__filter {
+		display: flex;
+
+		> div {
+			margin-left: 16px;
+		}
+	}
+
+	&__list {
+		margin-top: 16px;
+	}
+
+	&__user {
+		display: flex;
+		padding: 16px 8px;
+
+		border-top: 1px solid #ddd;
+		cursor: pointer;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.03);
+		}
+
+		&._head {
+			font-weight: 600;
+		}
+
+		> * {
+			flex-shrink: 0;
+			flex-grow: 0;
+		}
+
+		&-name {
+			width: 20%;
+		}
+
+		&-username {
+			color: $color-text-secondary;
+		}
+
+		&-email {
+			width: 25%;
+		}
+
+		&-location {
+			width: 20%;
+		}
+
+		&-subscription {
+			flex-grow: 1;
+		}
+
+		&:last-child {
+			border-bottom: 1px solid #ddd;
+		}
+	}
+}

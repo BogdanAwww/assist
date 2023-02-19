@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Assist CC</title>
+
+		<% const config = htmlWebpackPlugin.options.config %> <% const baseUrl = process.env.NODE_ENV !== 'development'
+		? '/cc/' : (config.baseUrl === '/' ? '/' : config.baseUrl + '/') %>
+		<base href="<%= baseUrl %>" target="_blank" />
+
+		<link
+			rel="shortcut icon"
+			href="<%= require('@/common/images/favicon/favicon.ico').default %>"
+			type="image/x-icon"
+		/>
+		<link rel="apple-touch-icon" href="<%= require('@/common/images/favicon/icon-152x152.png').default %>" />
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="<%= require('@/common/images/favicon/icon-152x152.png').default %>"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="<%= require('@/common/images/favicon/icon-152x152.png').default %>"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="<%= require('@/common/images/favicon/icon-152x152.png').default %>"
+		/>
+		<meta name="msapplication-TileColor" content="#000000" />
+		<meta
+			name="msapplication-TileImage"
+			content="<%= require('@/common/images/favicon/icon-250x250.png').default %>"
+		/>
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet" />
+		<% for (const file of htmlWebpackPlugin.files.css) { %>
+		<link rel="stylesheet" href="<%= file %>" />
+		<% } %>
+	</head>
+	<body>
+		<div id="app"></div>
+
+		<script>
+			window.CONFIG = <%= JSON.stringify(htmlWebpackPlugin.options.config) %>;
+		</script>
+		<% for (const file of htmlWebpackPlugin.files.js) { %>
+		<script src="<%= file %>"></script>
+		<% } %>
+	</body>
+</html>

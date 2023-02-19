@@ -1,0 +1,12 @@
+#import "../fragments/chatMessage.graphql"
+
+query getMessages($roomId: String!, $ts: String, $direction: String, $perPage: Int) {
+	getMessages(roomId: $roomId, ts: $ts, direction: $direction, perPage: $perPage) {
+		items {
+			...ChatMessage
+		}
+		hasItemsAfter
+		hasItemsBefore
+		count
+	}
+}

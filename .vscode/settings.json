@@ -1,0 +1,33 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "javascript.validate.enable": false,
+  "eslint.validate": [
+    {"language": "javascript", "autoFix": true},
+    {"language": "javascriptreact", "autoFix": true},
+    {"language": "typescript", "autoFix": true},
+    {"language": "typescriptreact", "autoFix": true}
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.autoFixOnSave": true,
+  "editor.autoIndent": "advanced",
+  "editor.tabSize": 4,
+   "[typescript]": {
+    "editor.formatOnSave": true,
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+  },
+  "css.validate": false,
+  "stylelint.config": {
+    "configFile": ".stylelintrc.json",
+    "files": ["*.css"]
+  }
+}

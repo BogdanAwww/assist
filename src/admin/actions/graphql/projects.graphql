@@ -1,0 +1,14 @@
+#import "@/web/actions/graphql/fragments/paginationInfo.graphql"
+#import "@/web/actions/graphql/fragments/project.graphql"
+
+query projects($filter: JSON, $page: Int, $perPage: Int) {
+	projects(filter: $filter, page: $page, perPage: $perPage) {
+		items {
+			...Project
+		}
+		count
+		pageInfo {
+			...PaginationInfo
+		}
+	}
+}

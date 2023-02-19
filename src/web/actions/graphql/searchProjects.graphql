@@ -1,0 +1,14 @@
+#import "./fragments/project.graphql"
+#import "./fragments/paginationInfo.graphql"
+
+query searchProjects($filter: SearchProjectInput, $page: Int, $perPage: Int) {
+	searchProjects(filter: $filter, page: $page, perPage: $perPage) {
+		items {
+			...Project
+		}
+		count
+		pageInfo {
+			...PaginationInfo
+		}
+	}
+}

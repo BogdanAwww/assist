@@ -1,0 +1,21 @@
+#import "./fragments/projectApplication.graphql"
+#import "./fragments/project.graphql"
+#import "./fragments/paginationInfo.graphql"
+
+query myApplications($filter: MyApplicationsFilterInput!) {
+	myApplications(filter: $filter) {
+		items {
+			...ProjectApplication
+			project {
+				...Project
+				counters {
+					applications
+				}
+			}
+		}
+		count
+		pageInfo {
+			...PaginationInfo
+		}
+	}
+}

@@ -1,0 +1,10 @@
+query getPromoCode($code: String!) {
+	getPromoCode(code: $code) {
+		code
+		promo {
+			type
+			data
+			description
+		}
+	}
+}

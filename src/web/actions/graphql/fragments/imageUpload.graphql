@@ -1,0 +1,6 @@
+fragment ImageUpload on Upload {
+	_id
+	type
+	urlTemplate
+	filename
+}

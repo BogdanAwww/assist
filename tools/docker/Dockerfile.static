@@ -1,0 +1,13 @@
+FROM nginx:stable-alpine
+
+ARG TARGET
+ENV NODE_ENV=production
+
+# app
+WORKDIR /app
+
+COPY ./tools/nginx/static.conf /etc/nginx/templates/default.conf.template
+COPY ./build/web web
+COPY ./build/admin admin
+
+EXPOSE 80

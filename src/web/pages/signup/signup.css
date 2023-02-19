@@ -1,0 +1,19 @@
+.signup-page {
+	width: 320px;
+
+	&__link {
+		@include link-underline();
+	}
+
+	&__buttons {
+		margin-top: 16px;
+		text-align: center;
+
+		> div {
+			margin-top: 8px;
+		}
+	}
+
+	@media (max-width: 768px) {
+	}
+}

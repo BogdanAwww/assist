@@ -1,0 +1,6 @@
+environment: beta
+
+staticReplicaCount: 2
+serverReplicaCount: 2
+
+version: 0.3.17

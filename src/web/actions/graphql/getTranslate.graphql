@@ -1,0 +1,7 @@
+#import "./fragments/chatMessage.graphql"
+
+query getTranslate($messageId: String!, $lang: String) {
+	getTranslate(messageId: $messageId, lang: $lang) {
+	...ChatMessage
+	}
+}

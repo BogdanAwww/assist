@@ -1,0 +1,9 @@
+{
+	"env": "staging",
+	"baseUrl": "/",
+	"api": "/api",
+	"ws": "/api",
+	"facebookAppId": "771051406808551",
+	"cloudpaymentId": "pk_d6a7b9c01fe8ce3512cb341058683",
+	"gtag": "G-KWDDYW6S0M"
+}

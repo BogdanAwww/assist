@@ -1,0 +1,89 @@
+.project-search-page {
+	&__disclaimer {
+		margin: 16px 0;
+		color: $color-text-secondary;
+	}
+
+	&__checkbox {
+		margin: 16px 0;
+	}
+
+	&__search-button {
+		margin-top: 32px;
+		text-align: center;
+	}
+
+	&__empty {
+		width: 80%;
+		max-width: 400px;
+		margin: 120px auto;
+		text-align: center;
+		@include font-14-regular();
+		line-height: 1.4;
+		color: $color-text-secondary;
+	}
+
+	&__list-filters {
+		display: flex;
+		min-height: 24px;
+		align-items: center;
+		justify-content: flex-end;
+		margin-bottom: 16px;
+	}
+
+	&__link {
+		@include link();
+		color: $color-text-secondary;
+		text-decoration: underline;
+
+		&:visited {
+			color: $color-text-secondary;
+		}
+	}
+
+	&__congratulation {
+		&-wrapper {
+			max-width: 450px;
+			margin: 3rem;
+		}
+
+		&-title {
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 32px;
+			text-align: center;
+			margin-bottom: 25px;
+			text-transform: uppercase;
+		}
+
+		&-list-title {
+			color: red;
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+			line-height: 30px;
+			text-align: center;
+		}
+
+		&-list {
+			list-style: disc;
+			line-height: 30px;
+			padding-left: 22px;
+			margin-bottom: 25px;
+
+			&-item {
+				font-size: 1rem;
+				&::marker {
+					color: red;
+					font-size: 1.3rem;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__open-filters {
+			text-align: center;
+			margin: 16px 0;
+		}
+	}
+}

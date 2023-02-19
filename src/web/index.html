@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
+		/>
+
+		<title>Assist</title>
+
+		<% const config = htmlWebpackPlugin.options.config %> <% const baseUrl = config.baseUrl === '/' ? '/' :
+		config.baseUrl + '/' %>
+		<base href="<%= baseUrl %>" target="_blank" />
+		<% if (config.csp) { %>
+		<meta http-equiv="Content-Security-Policy" content="<%= config.csp %>" />
+		<% } %>
+
+		<link
+			rel="shortcut icon"
+			href="<%= require('@/common/images/favicon/favicon.ico').default %>"
+			type="image/x-icon"
+		/>
+		<link rel="apple-touch-icon" href="<%= require('@/common/images/favicon/icon-152x152.png').default %>" />
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="<%= require('@/common/images/favicon/icon-152x152.png').default %>"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="<%= require('@/common/images/favicon/icon-152x152.png').default %>"
+		/>
+		<link
+			rel="apple-touch-startup-image"
+			href="<%= require('@/common/images/favicon/icon-152x152.png').default %>"
+		/>
+		<meta name="msapplication-TileColor" content="#000000" />
+		<meta
+			name="msapplication-TileImage"
+			content="<%= require('@/common/images/favicon/icon-250x250.png').default %>"
+		/>
+
+		<meta property="fb:app_id" content="<%= config.facebookAppId %>" />
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet" />
+		<% for (const file of htmlWebpackPlugin.files.css) { %>
+		<link rel="stylesheet" href="<%= file %>" />
+		<% } %>
+
+		<script src="https://widget.cloudpayments.ru/bundles/cloudpayments"></script>
+		<% if (config.gtag) { %>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=<%= config.gtag %>"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', '<%= config.gtag %>');
+		</script>
+		<% } %> <% if (config.env === 'production') { %>
+		<script>
+			(function (h, o, t, j, a, r) {
+				h.hj =
+					h.hj ||
+					function () {
+						(h.hj.q = h.hj.q || []).push(arguments);
+					};
+				h._hjSettings = {hjid: 2369872, hjsv: 6};
+				a = o.getElementsByTagName('head')[0];
+				r = o.createElement('script');
+				r.async = 1;
+				r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+		</script>
+		<% } %>
+	</head>
+	<body>
+		<div id="app"></div>
+
+		<script>
+			window.CONFIG = <%= JSON.stringify(htmlWebpackPlugin.options.config) %>;
+		</script>
+		<% for (const file of htmlWebpackPlugin.files.js) { %>
+		<script src="<%= file %>"></script>
+		<% } %>
+	</body>
+</html>

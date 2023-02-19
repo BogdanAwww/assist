@@ -1,0 +1,5 @@
+fragment City on City {
+	_id
+	localeName
+	localeFullName
+}

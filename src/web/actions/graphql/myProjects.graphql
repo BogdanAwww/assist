@@ -1,0 +1,14 @@
+#import "./fragments/project.graphql"
+
+query myProjects($status: String) {
+	myProjects(status: $status) {
+		...Project
+		counters {
+			applications
+		}
+		applicationsCounter {
+			unread
+			seen
+		}
+	}
+}

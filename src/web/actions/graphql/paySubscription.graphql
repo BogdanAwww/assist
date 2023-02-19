@@ -1,0 +1,7 @@
+mutation paySubscription($level: String!, $multiplier: Int, $code: String) {
+	paySubscription(level: $level, multiplier: $multiplier, code: $code) {
+		id
+		type
+		data
+	}
+}

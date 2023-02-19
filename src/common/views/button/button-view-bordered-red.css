@@ -1,0 +1,34 @@
+$root: .button;
+
+$(root) {
+	&._view_bordered-red {
+		&:not(._disabled) {
+			color: $color-red;
+			border: 2px solid $color-red;
+			background-color: $color-white;
+			box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+		}
+
+		$(root)__text,
+		$(root)__icon {
+			color: currentColor;
+		}
+
+		&:not(._disabled):hover {
+			color: $color-text-primary;
+			border-color: $color-text-primary;
+			background-color: $color-white;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+
+		&._disabled {
+			background-color: transparent;
+			color: #d9d9d9;
+
+			$(root)__text,
+			$(root)__icon {
+				color: #9a9a9a;
+			}
+		}
+	}
+}

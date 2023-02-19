@@ -1,0 +1,10 @@
+mutation uploadFile($type: String!, $file: UploadInput!) {
+	uploadFile(type: $type, file: $file) {
+		_id
+		type
+		url
+		urlTemplate
+		filename
+		isImage
+	}
+}

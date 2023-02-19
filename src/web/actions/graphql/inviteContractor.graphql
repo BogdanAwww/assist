@@ -1,0 +1,3 @@
+mutation inviteContractor($input: InviteContractorInput!) {
+	inviteContractor(input: $input)
+}

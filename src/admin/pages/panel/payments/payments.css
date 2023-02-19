@@ -1,0 +1,41 @@
+.payments-page {
+	&__line {
+		display: flex;
+		padding: 16px 8px;
+
+		border-top: 1px solid #ddd;
+
+		&._head {
+			font-weight: 600;
+		}
+
+		> * {
+			flex-shrink: 0;
+			flex-grow: 0;
+		}
+
+		&-name {
+			width: 20%;
+		}
+
+		&-username {
+			color: $color-text-secondary;
+		}
+
+		&-email {
+			width: 25%;
+		}
+
+		&-location {
+			width: 20%;
+		}
+
+		&-subscription {
+			flex-grow: 1;
+		}
+
+		&:last-child {
+			border-bottom: 1px solid #ddd;
+		}
+	}
+}

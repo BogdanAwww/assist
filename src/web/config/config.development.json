@@ -1,0 +1,9 @@
+{
+	"env": "development",
+	"baseUrl": "/",
+	"api": "http://localhost:4444",
+	"ws": "ws://localhost:4444",
+	"dev": true,
+	"facebookAppId": "697417280912074",
+	"cloudpaymentId": "pk_a1c9e78e59258b65111197455c886"
+}

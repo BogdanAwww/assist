@@ -1,0 +1,13 @@
+.proportion {
+	position: relative;
+	width: 100%;
+	height: 0;
+
+	&__wrapper {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+}

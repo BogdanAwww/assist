@@ -1,0 +1,7 @@
+#import "../fragments/chatMessage.graphql"
+
+query searchMessages($query: String!) {
+	searchMessages(query: $query) {
+		...ChatMessage
+	}
+}

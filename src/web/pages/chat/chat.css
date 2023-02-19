@@ -1,0 +1,12 @@
+.chat-page {
+	&:not(._mobile) &__messages {
+		position: fixed;
+		top: $header-height;
+		left: $page-padding-x + $left-column-width + $left-column-offset + $fixed-view-column-width +
+			$fixed-view-column-gutter + 32px;
+		right: 0;
+		bottom: 40px;
+		/* border: 1px solid #f00; */
+		/* padding-right: $page-padding-x; */
+	}
+}

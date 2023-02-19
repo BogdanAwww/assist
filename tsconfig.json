@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    // "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
+    "target": "es5",
+    "module": "esnext",
+    "rootDir": "./",
+    "outDir": "./lib",
+    "jsx": "react",
+
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "types": ["node", "jest"]
+  },
+  "include": ["src/**/*", "tools/**/*"]
+}

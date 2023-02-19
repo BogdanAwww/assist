@@ -1,0 +1,12 @@
+.page-title {
+	@include font-20-medium();
+	color: $color-text-primary;
+
+	&:not(._no-margin) {
+		margin-bottom: $page-title-margin;
+	}
+
+	&._red {
+		color: $color-text-red;
+	}
+}

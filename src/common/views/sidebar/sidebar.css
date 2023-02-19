@@ -1,0 +1,80 @@
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 20;
+	transition: opacity 0.4s;
+
+	&._animation-hide {
+		opacity: 0.99;
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		transition: opacity 0.4s;
+	}
+
+	&__content {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 40%;
+		max-width: 540px;
+		overflow-y: auto;
+		transform: translate3d(0, 0, 0);
+		animation: slideFromRight 0.4s;
+
+		padding: 32px 32px 64px 100px;
+
+		background-color: $color-background-light;
+	}
+
+	&._compact &__content {
+		padding-left: 32px;
+	}
+
+	&._animation-hide & {
+		&__overlay {
+			opacity: 0;
+		}
+
+		&__content {
+			animation: slideToRight 0.4s;
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__content {
+			width: 100%;
+			max-width: none;
+			box-sizing: border-box;
+			padding: 32px 16px 48px 16px;
+		}
+	}
+}
+
+@keyframes slideFromRight {
+	0% {
+		transform: translate(100%, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes slideToRight {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(100%, 0);
+	}
+}

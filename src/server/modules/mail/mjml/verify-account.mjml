@@ -1,0 +1,41 @@
+<mjml>
+	<mj-head>
+		<mj-title>Assist</mj-title>
+		<mj-attributes>
+			<mj-all font-family="Montserrat, Helvetica, Arial, sans-serif"></mj-all>
+			<mj-text font-size="14px" color="#000000" line-height="24px"></mj-text>
+		</mj-attributes>
+	</mj-head>
+	<mj-body background-color="#F2F2F2">
+		<mj-include path="./templates/header.mjml" />
+		<mj-section padding="40px 0 0 0" background-color="#FFFFFF">
+			<mj-column width="100%" padding="0 30px 0 30px">
+				<mj-text font-size="16px" font-weight="bold">Добро пожаловать на платформу Assist!</mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-section padding="0" background-color="#FFFFFF">
+			<mj-column width="100%" padding="0 30px 0 30px">
+				<mj-text> Пароль: {{password}} </mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-section padding="0" background-color="#FFFFFF">
+			<mj-column width="100%" padding="0 30px 0 30px">
+				<mj-text>
+					Мы рады видеть вас на платформе и готовы к плодотворному сотрудничеству. Чтобы как можно быстрее
+					найти проект или специалиста съемочной группы — подтвердите почту:
+				</mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-section padding="0" background-color="#FFFFFF">
+			<mj-column width="100%" padding="0 30px 0 30px">
+				<mj-button href="{{link}}" background-color="#f00" border-radius="32px">Подтвердить</mj-button>
+			</mj-column>
+		</mj-section>
+		<mj-section padding="0" background-color="#FFFFFF">
+			<mj-column width="100%" padding="0 30px 0 30px">
+				<mj-text>Команда Assist. 🎬</mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-include path="./templates/footer.mjml" />
+	</mj-body>
+</mjml>

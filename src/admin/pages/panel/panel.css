@@ -1,0 +1,7 @@
+.panel-page {
+	&__panel {
+		.button + .button {
+			margin-top: 16px;
+		}
+	}
+}

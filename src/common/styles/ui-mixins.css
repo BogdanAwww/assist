@@ -1,0 +1,177 @@
+$font-regular: 400;
+$font-medium: 600;
+$font-bold: 800;
+
+@mixin font-10-regular() {
+	font-size: 10px;
+	line-height: 12px;
+	font-weight: $font-regular;
+}
+
+@mixin font-10-medium() {
+	font-size: 10px;
+	line-height: 12px;
+	font-weight: $font-medium;
+}
+
+@mixin font-10-bold() {
+	font-size: 10px;
+	line-height: 12px;
+	font-weight: $font-bold;
+}
+
+@mixin font-12-regular() {
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: $font-regular;
+}
+
+@mixin font-12-medium() {
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: $font-medium;
+}
+
+@mixin font-12-bold() {
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: $font-bold;
+}
+
+@mixin font-14-regular() {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: $font-regular;
+}
+
+@mixin font-14-medium() {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: $font-medium;
+}
+
+@mixin font-14-bold() {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: $font-bold;
+}
+
+@mixin font-16-regular() {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: $font-regular;
+}
+
+@mixin font-16-medium() {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: $font-medium;
+}
+
+@mixin font-16-bold() {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: $font-bold;
+}
+
+@mixin font-18-regular() {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: $font-regular;
+}
+
+@mixin font-18-medium() {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: $font-medium;
+}
+
+@mixin font-18-bold() {
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: $font-bold;
+}
+
+@mixin font-20-regular() {
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: $font-regular;
+}
+
+@mixin font-20-medium() {
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: $font-medium;
+}
+
+@mixin font-20-bold() {
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: $font-bold;
+}
+
+@mixin font-22-regular() {
+	font-size: 22px;
+	line-height: 26px;
+	font-weight: $font-regular;
+}
+
+@mixin font-22-medium() {
+	font-size: 22px;
+	line-height: 26px;
+	font-weight: $font-medium;
+}
+
+@mixin font-22-bold() {
+	font-size: 22px;
+	line-height: 26px;
+	font-weight: $font-bold;
+}
+
+@mixin font-24-regular() {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: $font-regular;
+}
+
+@mixin font-24-medium() {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: $font-medium;
+}
+
+@mixin font-24-bold() {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: $font-bold;
+}
+
+@mixin text-ellipsis() {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+@mixin text-clamp($lines, $line-height) {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $lines;
+
+	max-height: $line-height * $lines;
+}
+
+@mixin link() {
+	display: inline-block;
+	cursor: pointer;
+	color: $color-text-primary;
+
+	&:hover {
+		color: $color-red-dark !important;
+	}
+}
+
+@mixin link-underline() {
+	@include link();
+	text-decoration: underline;
+}

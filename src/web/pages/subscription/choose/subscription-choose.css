@@ -1,0 +1,282 @@
+.subscription-choose-page {
+	max-width: 960px;
+	margin: 0 auto;
+
+	&__blocks {
+		display: flex;
+		margin: 0 -8px;
+	}
+
+	&__block {
+		flex-basis: 33%;
+		flex-grow: 1;
+
+		padding: 8px;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	&__description {
+		margin-top: 16px;
+		text-align: center;
+	}
+
+	&__price-wrapper {
+		display: inline;
+		width: fit-content;
+		margin: 0 auto;
+		position: relative;
+
+		/* background-color: blue; */
+
+	}
+
+	&__price-wrapper::after {
+		content: '';
+  		position: absolute;
+  		left: 0;
+  		top: 50%;
+		transform: rotate(-30deg);
+  		right: 0;
+  		bottom: 0;
+  		width: 100%;
+  		height: 2px;
+  		background-color: black;
+	}
+
+	&__price {
+		margin: 16px 0 8px 0;
+		text-align: center;
+
+		@include font-16-regular();
+	}
+
+	&__second-price {
+		margin: 0 0 16px 0;
+		text-align: center;
+
+		@include font-20-regular();
+	}
+
+	&__third-price {
+		margin: 0 0 16px 0;
+		text-align: center;
+		color: red;
+
+		@include font-24-regular();
+	}
+
+	b {
+		font-weight: bold;
+	}
+
+	&__content {
+		flex-grow: 1;
+		margin-top: 16px;
+	}
+
+	&__info {
+		display: flex;
+		flex-grow: 1;
+		justify-content: space-between;
+		margin: 12px 0;
+
+		&-title {
+			max-width: 50%;
+			color: $color-text-secondary;
+		}
+
+		&-value {
+			max-width: 50%;
+			color: $color-text-primary;
+		}
+	}
+
+	&__subscription {
+		display: flex;
+		align-items: center;
+
+		padding-bottom: 16px;
+		margin-bottom: 24px;
+		border-bottom: 1px solid #bbb;
+
+		&-level {
+			@include font-16-regular();
+
+			span {
+				margin-right: 16px;
+			}
+		}
+
+		&-date {
+			margin-left: 24px;
+			@include font-12-regular();
+			color: $color-text-secondary;
+
+			span {
+				@include font-16-regular();
+				color: $color-text-primary;
+
+				margin-left: 8px;
+			}
+		}
+	}
+
+	&__attention {
+		font-size: 16px;
+		color: red;
+		margin: 16px 0;
+	}
+
+	&__dialog {
+		min-width: 480px;
+
+		&-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 50px 0;
+		}
+
+		&-badge {
+			width: 250px;
+		}
+
+		&-title {
+			color: red;
+			@include font-18-medium();
+			margin-bottom: 10px;
+		}
+
+		&-subtitle {
+			font-size: 14px;
+			margin-top: 20px;
+		}
+
+		&-cards {
+			display: flex;
+			justify-content: center;
+			gap: 5px;
+			margin: 24px 0;
+			width: 400px;
+
+			> * {
+				background-color: blue;
+			}
+
+		}
+
+		&-card {
+			text-align: center;
+			width: 170px;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			font-size: 20px;
+			&-price {
+				/* @include font-16-medium(); */
+			}
+
+			&-month {
+				margin-top: 8px;
+				/* @include font-14-regular(); */
+			}
+
+			&-bonus {
+				margin-top: 8px;
+				color: $color-text-secondary;
+			}
+		}
+
+		&-price {
+			line-height: 25px;
+		}
+
+		&-button {
+			margin-top: auto;
+		}
+	}
+
+	&__link {
+		@include link();
+	}
+
+	&__back {
+		text-align: center;
+	}
+
+	&__pay {
+		padding: 16px;
+	}
+
+	@media (min-width: 768px) {
+		&__promo-line {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 24px 0;
+		}
+
+		&__promo-text {
+			margin-right: 24px;
+		}
+
+		&__promo-input {
+			width: 320px;
+		}
+
+		&__promo-button {
+			margin-left: 24px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__blocks {
+			display: block;
+			padding-bottom: 48px;
+		}
+
+		&__subscription {
+			display: block;
+
+			&-date {
+				margin-left: 0;
+				margin-top: 8px;
+			}
+		}
+
+		&__dialog {
+			min-width: 260px;
+
+			&-cards {
+				flex-direction: column;
+
+				> * {
+					width: 100%;
+				}
+
+				> div + div {
+					margin-left: 0;
+					margin-top: 16px;
+				}
+			}
+		}
+
+		&__promo-line {
+			text-align: center;
+		}
+
+		&__promo-text {
+			@include font-16-regular();
+			margin-bottom: 16px;
+		}
+
+		&__promo-button {
+			margin-top: 16px;
+		}
+	}
+}

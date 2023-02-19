@@ -1,0 +1,14 @@
+.items-list {
+	position: relative;
+
+	&__empty {
+		width: 100%;
+		margin: 120px 0;
+		text-align: center;
+		color: $color-text-secondary;
+	}
+
+	&__pagination {
+		width: 100%;
+	}
+}

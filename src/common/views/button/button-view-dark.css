@@ -1,0 +1,21 @@
+$root: .button;
+
+$(root) {
+	&._view_dark {
+		&:not(._disabled) {
+			color: #484848;
+			border: 2px solid currentColor;
+			background-color: currentColor;
+		}
+
+		$(root)__text,
+		$(root)__icon {
+			color: #fff;
+		}
+
+		&:not(._disabled):hover {
+			color: $color-background-dark;
+			background-color: currentColor;
+		}
+	}
+}

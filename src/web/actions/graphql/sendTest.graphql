@@ -1,0 +1,3 @@
+mutation sendTest($id: String!) {
+	sendTest(id: $id)
+}

@@ -1,0 +1,4 @@
+fragment Country on Country {
+	_id
+	localeName
+}

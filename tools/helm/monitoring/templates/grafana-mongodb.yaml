@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: grafana-mongodb
+  name: grafana-mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grafana-mongodb
+  template:
+    metadata:
+      labels:
+        app: grafana-mongodb
+    spec:
+      containers:
+      - image: asmoth/grafana-mongodb:0.0.9
+        imagePullPolicy: Always
+        name: grafana-mongodb
+        ports:
+        - containerPort: 3333

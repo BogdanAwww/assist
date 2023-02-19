@@ -1,0 +1,59 @@
+.promo-dialog {
+	&__title {
+		font-weight: bold;
+		font-size: 26px;
+		margin: 40px auto;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__block {
+		display: flex;
+		gap: 10px;
+		width: 400px;
+	}
+
+	&__card {
+		flex-grow: 1;
+	}
+
+	&__price-wrapper::after {
+		content: '';
+		position: absolute;
+		left: 20%;
+		top: 50%;
+		width: 60%;
+		height: 2px;
+		background-color: black;
+		transform: rotate(-30deg);
+	}
+
+	&__price {
+		margin: 16px 0 8px 0;
+		text-align: center;
+
+		@include font-16-regular();
+	}
+
+	&__second-price {
+		margin: 0 0 16px 0;
+		text-align: center;
+
+		@include font-20-regular();
+	}
+
+	&__third-price {
+		margin: 0 0 16px 0;
+		text-align: center;
+		color: red;
+
+		@include font-24-regular();
+	}
+
+	&__button {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: 30px;
+	}
+}

@@ -1,0 +1,205 @@
+.employer-project-view-page {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 16px;
+	}
+
+	&__empty {
+		margin: 120px 0;
+		text-align: center;
+		color: $color-text-secondary;
+	}
+
+	&__application {
+		&-buttons {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+
+			margin-top: 60px;
+		}
+
+		&-button {
+			margin: 0 8px 16px;
+		}
+
+		&-test {
+			margin: 24px 0;
+			text-align: center;
+
+			&-sent {
+				color: $color-text-secondary;
+			}
+		}
+	}
+
+	&__block {
+		margin: 32px 0;
+
+		&-title {
+			margin-bottom: 8px;
+			@include font-14-medium();
+			color: $color-text-red;
+		}
+	}
+
+	&__author {
+		&-head {
+			display: flex;
+		}
+
+		&-info {
+			display: flex;
+			min-width: 200px;
+			align-items: center;
+		}
+
+		.badge + &-firstname {
+			margin-top: 8px;
+		}
+
+		&-name {
+			margin-left: 16px;
+			@include font-14-medium();
+		}
+
+		&-specialties {
+			margin-left: 16px;
+		}
+	}
+
+	&__specialty {
+		margin: 8px 0;
+
+		&._active {
+			@include font-14-medium();
+			color: $color-text-red;
+		}
+	}
+
+	&__budget {
+		&-item {
+			display: flex;
+			margin: 8px 0;
+
+			&-title {
+				min-width: 180px;
+			}
+
+			&-value {
+			}
+		}
+	}
+
+	&__dialog {
+		width: 480px;
+
+		&-buttons {
+			display: flex;
+			justify-content: flex-end;
+			margin-top: 48px;
+		}
+
+		&-button {
+			margin-left: 16px;
+		}
+	}
+
+	&__rejection {
+		&-question {
+			@include font-18-medium();
+			color: $color-text-primary;
+		}
+
+		&-disclaimer {
+			margin-top: 24px;
+			@include font-14-regular();
+			color: $color-text-secondary;
+		}
+	}
+
+	&__buttons {
+		text-align: center;
+		margin: 24px 0;
+
+		> * + * {
+			margin-left: 16px;
+		}
+	}
+
+	&__sized-list {
+		margin-top: 16px;
+	}
+
+	&__author-contacts {
+		& > div {
+			margin: 8px 0;
+		}
+	}
+
+	&__send-message {
+		text-align: center;
+	}
+
+	&__congratulation {
+		&__wrapper {
+			max-width: 450px;
+			margin: 30px;
+		}
+
+		&__title {
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 32px;
+			text-align: center;
+			margin-bottom: 25px;
+			text-transform: uppercase;
+		}
+
+		&__subtitle {
+			text-align: left;
+			font-size: 0.8rem;
+			line-height: 22px;
+			margin-bottom: 2.5rem;
+		}
+
+		&__list-title {
+			color: red;
+			font-size: 1rem;
+			text-transform: uppercase;
+			margin-bottom: 1rem;
+			line-height: 30px;
+		}
+
+		&__list {
+			list-style: disc;
+			font-size: 1rem;
+			line-height: 30px;
+			padding-left: 22px;
+			margin-bottom: 25px;
+			&__item {
+				&::marker {
+					color: red;
+					font-size: 1.3rem;
+				}
+			}
+		}
+
+		&__button {
+			margin-left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	@media (max-width: 768px) {
+		&__list {
+			margin-top: 24px;
+		}
+
+		&__header {
+			display: block;
+		}
+	}
+}

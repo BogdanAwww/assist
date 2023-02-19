@@ -1,0 +1,7 @@
+#import "./fragments/portfolioProject.graphql"
+
+query portfolioProjects($filter: PortfolioProjectsFilter!) {
+	portfolioProjects(filter: $filter) {
+		...PortfolioProject
+	}
+}

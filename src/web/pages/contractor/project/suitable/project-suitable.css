@@ -1,0 +1,28 @@
+.project-suitable-page {
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: $page-title-margin;
+	}
+
+	&__filters {
+		display: flex;
+		align-items: center;
+
+		&-icon {
+			margin-left: 16px;
+			@include link();
+		}
+	}
+
+	&__list {
+		margin-top: 16px;
+	}
+
+	&__empty {
+		margin: 120px auto;
+		text-align: center;
+		color: $color-text-secondary;
+	}
+}

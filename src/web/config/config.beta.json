@@ -1,0 +1,9 @@
+{
+	"env": "beta",
+	"baseUrl": "/",
+	"api": "/api",
+	"ws": "/api",
+	"facebookAppId": "771051406808551",
+	"cloudpaymentId": "pk_960ec61ac4f674cf102d0e0feb8e3",
+	"gtag": "G-KWDDYW6S0M"
+}

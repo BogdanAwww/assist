@@ -1,0 +1,16 @@
+.faq-search {
+
+    &__input-wrapper {
+        margin-bottom: 30px;
+    }
+
+    &__input {
+        width: 375px;
+        margin-right: 30px;
+        display: inline-block;
+    }
+
+    &__button {
+        margin-bottom: 14px;
+    }
+}

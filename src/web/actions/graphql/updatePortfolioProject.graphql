@@ -1,0 +1,7 @@
+#import "./fragments/portfolioProject.graphql"
+
+mutation updatePortfolioProject($id: String!, $input: CreatePortfolioProjectInput!) {
+	updatePortfolioProject(id: $id, input: $input) {
+		...PortfolioProject
+	}
+}

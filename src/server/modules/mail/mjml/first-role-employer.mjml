@@ -1,0 +1,36 @@
+<mjml>
+	<mj-head>
+		<mj-title>Assist</mj-title>
+		<mj-attributes>
+			<mj-all font-family="Montserrat, Helvetica, Arial, sans-serif"></mj-all>
+			<mj-text font-size="14px" color="#000000" line-height="24px"></mj-text>
+		</mj-attributes>
+	</mj-head>
+	<mj-body background-color="#F2F2F2">
+		<mj-include path="./templates/header.mjml" />
+		<mj-section padding="20px 0px 20px 0" background-color="#FFFFFF">
+			<mj-column width="100%" padding="0 30px 0 30px">
+				<mj-text font-size="16px" font-weight="bold">Опубликуем проект?</mj-text>
+				<mj-text>Теперь можно приступить к основному процессу поиска специалистов.</mj-text>
+				<mj-text>
+					<b>Шаг 1.</b> Заполните профиль, чтобы специалистам было проще понять кто вы и какие проекты уже
+					создавали.
+				</mj-text>
+				<mj-button href="{{editProfileLink}}" background-color="#f00" border-radius="32px"
+					>Заполнить профиль</mj-button
+				>
+				<mj-text>
+					<b>Шаг 2.</b> Опубликуйте свой первый проект. Система автоматически подберет вам подходящих
+					специалистов и покажет им детали вашего проекта. Как только кто-то из специалистов откликнется — мы
+					оповестим вас на самой платформе и письмом.
+				</mj-text>
+				<mj-button href="{{addProjectLink}}" background-color="#f00" border-radius="32px"
+					>Добавить проект</mj-button
+				>
+				<mj-text padding="16px 0 0 25px">Рады, что вы с нами</mj-text>
+				<mj-text padding="0 0 0 114px">— команда Assist. 🎬</mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-include path="./templates/footer.mjml" />
+	</mj-body>
+</mjml>

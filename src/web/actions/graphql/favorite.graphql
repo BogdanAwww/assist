@@ -1,0 +1,3 @@
+mutation favorite($type: String!, $id: String!, $state: Boolean) {
+	favorite(type: $type, id: $id, state: $state)
+}

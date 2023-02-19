@@ -1,0 +1,49 @@
+.applications-list-page {
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: $page-title-margin;
+	}
+
+	&__archive-filters {
+		margin-bottom: 16px;
+	}
+
+	&__empty {
+		margin: 120px auto;
+		text-align: center;
+		color: $color-text-secondary;
+	}
+
+	&__applications {
+		margin-top: 16px;
+	}
+
+	&__keyvalue {
+		&-title {
+			display: inline-block;
+		}
+
+		&-value {
+			display: inline-block;
+			margin-left: 8px;
+			@include font-14-regular();
+		}
+	}
+
+	&__finished {
+		@include font-14-medium();
+		color: $color-text-red;
+	}
+
+	@media (max-width: 768px) {
+		&__head {
+			display: block;
+		}
+
+		&__page-title {
+			margin-bottom: 16px;
+		}
+	}
+}

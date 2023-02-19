@@ -1,0 +1,48 @@
+.checkbox {
+	display: flex;
+	align-items: center;
+	color: #000;
+	@include font-12-regular();
+	cursor: pointer;
+	user-select: none;
+	margin: 8px 0;
+
+	&__icon {
+		flex-shrink: 0;
+		align-self: baseline;
+		position: relative;
+		width: 18px;
+		height: 18px;
+		background-color: #d6d6d6;
+		border-radius: 4px;
+	}
+
+	&__tick {
+		position: absolute;
+		left: 4px;
+		bottom: 4px;
+		font-size: 0;
+		line-height: 0;
+	}
+
+	&__label {
+		margin-left: 8px;
+		padding: 2px 0;
+	}
+
+	&._selected & {
+		&__icon {
+			color: $color-red-dark;
+		}
+	}
+
+	&._disabled {
+		color: $color-text-secondary;
+	}
+
+	&._disabled & {
+		&__icon {
+			color: #c1c1c1;
+		}
+	}
+}

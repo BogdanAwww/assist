@@ -1,0 +1,8 @@
+.chat-sidebar {
+	&__close {
+		position: absolute;
+		right: 32px;
+		top: 32px;
+		cursor: pointer;
+	}
+}

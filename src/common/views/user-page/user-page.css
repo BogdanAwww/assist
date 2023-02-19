@@ -1,0 +1,38 @@
+.user-page {
+	padding: 0 $page-padding-x;
+
+	&__user-column {
+		position: fixed;
+		top: $header-height;
+		left: $page-padding-x;
+		bottom: 40px;
+		width: $left-column-width;
+	}
+
+	&__page-content {
+		margin-left: $left-column-width + $left-column-offset;
+		margin-bottom: 48px;
+	}
+
+	&._hide-left & {
+		&__user-column {
+			display: none;
+		}
+
+		&__page-content {
+			margin-left: 0;
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 0 $page-padding-x-mobile;
+
+		&__user-column {
+			display: none;
+		}
+
+		&__page-content {
+			margin-left: 0;
+		}
+	}
+}

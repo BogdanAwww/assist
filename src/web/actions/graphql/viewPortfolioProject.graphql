@@ -1,0 +1,3 @@
+mutation viewPortfolioProject($id: String!) {
+	viewPortfolioProject(id: $id)
+}

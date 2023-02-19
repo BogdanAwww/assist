@@ -1,0 +1,9 @@
+{
+	"env": "production",
+	"baseUrl": "/",
+	"api": "/api",
+	"ws": "/api",
+	"facebookAppId": "771051406808551",
+	"cloudpaymentId": "pk_e09653d11417cbaa9f9d5cb363dc5",
+	"gtag": "GTM-57L224Z"
+}

@@ -1,0 +1,7 @@
+#import "./fragments/project.graphql"
+
+mutation publishProject($id: String!) {
+	publishProject(id: $id) {
+		...Project
+	}
+}

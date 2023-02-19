@@ -1,0 +1,134 @@
+.user-card {
+	&__header {
+		display: flex;
+		align-items: center;
+
+		&-info {
+			flex-grow: 1;
+			margin-left: 16px;
+
+			&-top {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+	}
+
+	&__viewer-name {
+		@include font-14-medium();
+	}
+
+	&__profile-edit {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 24px;
+		height: 24px;
+		color: $color-white;
+		border-radius: 100%;
+		background-color: $color-background-dark;
+		transition: opacity 0.2s;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__description {
+		margin-top: 16px;
+		@include font-14-regular();
+	}
+
+	&__location {
+		margin-top: 16px;
+		@include font-14-regular();
+
+		&-title {
+			color: $color-text-secondary;
+		}
+
+		&-value {
+			margin-top: 4px;
+			color: $color-white;
+		}
+	}
+
+	&__contacts {
+		margin-top: 24px;
+		@include font-14-regular();
+
+		&-header {
+			color: $color-text-secondary;
+		}
+	}
+
+	&__contact {
+		display: block;
+		margin: 8px 0;
+		color: $color-white;
+
+		a {
+			text-decoration: underline;
+			color: $color-white;
+
+			&:visited {
+				color: $color-white;
+			}
+
+			&:hover {
+				color: $color-red-dark;
+			}
+		}
+	}
+
+	&__subscription {
+		margin-top: 24px;
+
+		&-title {
+			color: $color-text-secondary;
+		}
+
+		&-info {
+			margin-top: 8px;
+			display: flex;
+		}
+
+		&-till {
+			&-date {
+				@include font-14-regular();
+				color: $color-white;
+			}
+		}
+
+		&-upgrade {
+			margin-top: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&-button {
+				width: 50%;
+			}
+		}
+	}
+
+	&__total {
+		margin-left: 24px;
+	}
+
+	&__stat {
+		margin-top: 4px;
+
+		span {
+			margin-left: 4px;
+			color: $color-white;
+		}
+
+		&-title {
+			color: $color-white;
+			margin-bottom: 8px;
+		}
+	}
+}

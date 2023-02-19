@@ -1,0 +1,5 @@
+.error-label {
+	margin-top: 8px;
+	@include font-12-regular();
+	color: $color-text-red;
+}

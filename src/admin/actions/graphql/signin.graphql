@@ -1,0 +1,7 @@
+#import "./fragments/viewer.graphql"
+
+mutation signin($login: String!, $password: String!) {
+	signin(login: $login, password: $password) {
+		...Viewer
+	}
+}

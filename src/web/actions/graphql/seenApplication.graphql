@@ -1,0 +1,3 @@
+mutation seenApplication($id: String!) {
+	seenApplication(id: $id)
+}

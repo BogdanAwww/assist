@@ -1,0 +1,32 @@
+#import "./fragments/shortUser.graphql"
+#import "./fragments/specialty.graphql"
+#import "./fragments/paginationInfo.graphql"
+#import "./fragments/project.graphql"
+
+query favorites($type: String, $page: Int) {
+	favorites(filter: {type: $type}, page: $page) {
+		count {
+			User
+			Project
+		}
+		items {
+			_id
+			type
+			subject {
+				... on User {
+					...ShortUser
+					specialties {
+						...Specialty
+					}
+				}
+				... on Project {
+					...Project
+				}
+			}
+			ts
+		}
+		pageInfo {
+			...PaginationInfo
+		}
+	}
+}

@@ -1,0 +1,293 @@
+.project-add-page {
+	&__header {
+		margin-bottom: 16px;
+	}
+
+	&__step-content {
+		min-height: 480px;
+	}
+
+	&__upload {
+		@include font-12-regular();
+		color: $color-text-secondary;
+		text-align: center;
+
+		&._dragover {
+			background-color: #ddeedd;
+
+			* {
+				pointer-events: none;
+			}
+		}
+	}
+
+	&__or {
+		margin: 8px 0;
+		color: $color-text-gray;
+	}
+
+	&__select-file {
+		text-decoration: underline;
+		cursor: pointer;
+
+		&:hover {
+			color: $color-red-dark;
+		}
+	}
+
+	&__list-filters {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 16px;
+	}
+
+	&__empty {
+		margin: 60px 0;
+		margin-left: 50%;
+		transform: translateX(-50%);
+		color: $color-text-secondary;
+		display: inline-block;
+		&__row {
+			margin-bottom: 10px;
+		}
+		text-align: left;
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: center;
+		margin-top: 24px;
+
+		> div {
+			flex-grow: 1;
+			flex-basis: 50%;
+			max-width: 176px;
+		}
+
+		div + div {
+			margin-left: 8px;
+		}
+	}
+
+	&__steps {
+		margin-top: 8px;
+		@include font-12-regular();
+		color: $color-text-secondary;
+		text-align: center;
+
+		b {
+			font-weight: bold;
+		}
+	}
+
+	&__specialties-list {
+		margin: 16px 0;
+	}
+
+	&__specialty {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		user-select: none;
+	}
+
+	&__specialty-remove {
+		line-height: 0;
+		cursor: pointer;
+
+		&:hover {
+			color: $color-red-dark;
+		}
+	}
+
+	&__only-premium {
+		margin-top: 32px;
+	}
+
+	&__end-date {
+		margin-bottom: 16px;
+		text-align: center;
+		color: $color-text-secondary;
+
+		&-or {
+			margin: 8px 0;
+		}
+
+		&-buttons {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 24px;
+		}
+	}
+
+	&__hot {
+		&-title {
+			@include font-14-regular();
+			color: $color-red-dark;
+		}
+
+		&-icon {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 4px;
+		}
+
+		&-description {
+			margin-top: 4px;
+		}
+	}
+
+	&__budget {
+		margin-top: 16px;
+	}
+
+	&__payment {
+		display: flex;
+
+		& > div {
+			width: 50%;
+		}
+
+		& > div + div {
+			margin-left: 16px;
+		}
+	}
+
+	&__references-button {
+		margin: 24px 0;
+		text-align: center;
+	}
+
+	&__reference-buttons {
+		margin-top: 16px;
+		text-align: center;
+	}
+
+	&__reference {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		user-select: none;
+
+		&-link {
+			@include link();
+			margin-left: 8px;
+		}
+
+		&-remove {
+			line-height: 0;
+			cursor: pointer;
+
+			&:hover {
+				color: $color-red-dark;
+			}
+		}
+	}
+
+	&__test-label {
+		margin-top: 24px;
+	}
+
+	&__test-or {
+		margin: 16px 0;
+	}
+
+	&__test-button {
+		text-align: center;
+	}
+
+	&__references-dialog {
+		width: 400px;
+	}
+
+	&__subscription-dialog {
+		width: 400px;
+	}
+
+	&__dialog-text {
+		color: $color-text-secondary;
+	}
+
+	&__dialog-button {
+		margin-top: 16px;
+		text-align: right;
+	}
+
+	&__preview {
+		width: 580px;
+
+		&-buttons {
+			margin-top: 32px;
+			text-align: center;
+
+			.button {
+				margin-top: 16px;
+			}
+
+			.button + .button {
+				margin-left: 24px;
+			}
+		}
+	}
+
+	&__congratulation {
+		&__wrapper {
+			max-width: 450px;
+			margin: 30px;
+		}
+
+		&__title {
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 32px;
+			text-align: center;
+			margin-bottom: 25px;
+			text-transform: uppercase;
+		}
+
+		&__subtitle {
+			text-align: left;
+			font-size: 1rem;
+			line-height: 22px;
+			margin-bottom: 2.5rem;
+		}
+
+		&__list-title {
+			color: red;
+			font-size: 1rem;
+			text-transform: uppercase;
+			margin-bottom: 1rem;
+			line-height: 30px;
+		}
+
+		&__list {
+			list-style: disc;
+			font-size: 0.8rem;
+			line-height: 30px;
+			padding-left: 22px;
+			margin-bottom: 25px;
+			&__item {
+				&::marker {
+					color: red;
+					font-size: 1.3rem;
+				}
+			}
+		}
+
+		&__button {
+			margin-left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__open-create {
+		text-align: center;
+		margin: 16px 0;
+	}
+
+	@media (max-width: 768px) {
+		&__preview {
+			width: auto;
+		}
+	}
+}

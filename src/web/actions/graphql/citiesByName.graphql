@@ -1,0 +1,7 @@
+#import "./fragments/city.graphql"
+
+query cities($name: String!) {
+	citiesByName(name: $name) {
+		...City
+	}
+}

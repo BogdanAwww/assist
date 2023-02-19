@@ -1,0 +1,9 @@
+#import './fragments/specialty.graphql'
+
+query specialty($id: String!) {
+	specialty(id: $id) {
+		...Specialty
+		titles
+		isFrequentlyUsed
+	}
+}

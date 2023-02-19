@@ -1,0 +1,3 @@
+mutation inviteFriend($email: String!) {
+	inviteFriend(email: $email)
+}

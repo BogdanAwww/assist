@@ -1,0 +1,3 @@
+mutation verifyAccount($hash: String!) {
+	verifyAccount(hash: $hash)
+}

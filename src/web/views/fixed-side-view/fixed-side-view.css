@@ -1,0 +1,41 @@
+$bottom-padding: 0px;
+
+.fixed-side-view {
+	display: flex;
+
+	$left-offset: $page-padding-x + $left-column-width + $left-column-offset;
+
+	&__side {
+		position: fixed;
+		top: $header-height;
+		left: $left-offset;
+		height: calc(100vh - $header-height - $bottom-padding);
+
+		width: $fixed-view-column-width;
+		padding-right: $fixed-view-column-gutter;
+
+		overflow-x: hidden;
+		overflow-y: auto;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 40px;
+			border-right: 1px solid #bbb;
+		}
+	}
+
+	&__content {
+		flex-grow: 1;
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: $fixed-view-column-width + $fixed-view-column-gutter + $fixed-view-column-gutter;
+	}
+
+	&._no-margin &__side {
+		left: $page-padding-x;
+	}
+}

@@ -1,0 +1,118 @@
+.choose-role {
+	width: 50%;
+	min-width: 400px;
+
+	&__welcome {
+		@include font-16-regular();
+	}
+
+	&__user {
+		display: flex;
+		align-items: center;
+		margin: 36px 0;
+		margin-left: -16px;
+	}
+
+	&__name {
+		flex-grow: 1;
+		margin-left: 16px;
+		@include font-14-bold();
+	}
+
+	&__edit {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 36px;
+		height: 36px;
+		color: $color-white;
+		border-radius: 100%;
+		background-color: $color-background-dark;
+		transition: opacity 0.2s;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__roles {
+		display: flex;
+		width: 100%;
+	}
+
+	&__role {
+		width: 50%;
+		box-sizing: border-box;
+
+		&-continue {
+			@include font-16-regular();
+		}
+
+		&-as {
+			margin-top: 10px;
+			@include font-22-bold();
+			text-transform: uppercase;
+			white-space: nowrap;
+		}
+
+		&-text {
+			margin-top: 20px;
+			@include font-12-regular();
+			color: $color-text-gray;
+		}
+
+		& + & {
+			margin-left: 16px;
+		}
+
+		&._invalid {
+			pointer-events: none;
+			opacity: 0.4;
+		}
+	}
+
+	&__error {
+		color: $color-text-red;
+		text-align: center;
+
+		margin: 16px 0;
+	}
+
+	&__send-again {
+		margin: 16px 0;
+		text-align: center;
+	}
+
+	&__signout {
+		margin-top: 24px;
+		text-align: center;
+	}
+
+	@media (max-width: 768px) {
+		width: auto;
+		min-width: auto;
+
+		&__user {
+			margin-left: 0;
+		}
+
+		&__roles {
+			flex-direction: column;
+		}
+
+		&__role {
+			width: auto;
+			text-align: center;
+
+			&-card {
+				padding: 32px 16px !important;
+			}
+
+			& + & {
+				margin-left: 0;
+				margin-top: 16px;
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+$color-red: #f00;
+$color-red-dark: #d96b6b;
+$color-black: #000;
+$color-white: #fff;
+
+$color-background-primary: #484848;
+$color-background-dark: #3e3e3e;
+$color-background-light: #f3f3f3;
+
+$color-text-red: #f25757;
+$color-text-primary: #484848;
+$color-text-secondary: #8a8a8a;
+$color-text-gray: #bbbbbb;
+
+$color-gray-1: #8a8a8a;
+
+$color-separator: #434343;
+
+$left-column-width: 240px;
+$left-column-offset: 32px;
+$header-height: 100px;
+$compact-header-height-mobile: 64px;
+$page-padding-x: 60px;
+$page-padding-x-mobile: 16px;
+
+$page-title-margin: 16px;
+
+$fixed-view-column-width: 360px;
+$fixed-view-column-gutter: 32px;

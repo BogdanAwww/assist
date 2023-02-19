@@ -1,0 +1,10 @@
+#import "./fragments/shortUser.graphql"
+
+mutation recommendUser($id: String!, $status: Boolean!) {
+	recommendUser(id: $id, status: $status) {
+		count
+		last {
+			...ShortUser
+		}
+	}
+}

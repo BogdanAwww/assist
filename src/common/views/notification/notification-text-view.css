@@ -1,0 +1,19 @@
+.notification-text-view {
+	b {
+		font-weight: bold;
+	}
+
+	&__link {
+		display: inline-block;
+		cursor: pointer;
+		color: $color-text-primary;
+
+		&:focus {
+			outline: 0;
+		}
+
+		&:hover {
+			color: #222;
+		}
+	}
+}

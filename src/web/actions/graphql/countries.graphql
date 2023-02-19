@@ -1,0 +1,7 @@
+#import "./fragments/country.graphql"
+
+{
+	countries {
+		...Country
+	}
+}

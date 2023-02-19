@@ -1,0 +1,7 @@
+#import "../fragments/chatMessage.graphql"
+
+mutation sendMessage($userId: String!, $type: String!, $content: String, $file: String) {
+	sendMessage(userId: $userId, type: $type, content: $content, file: $file) {
+		...ChatMessage
+	}
+}

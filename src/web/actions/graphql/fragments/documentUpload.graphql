@@ -1,0 +1,7 @@
+fragment DocumentUpload on Upload {
+	_id
+	type
+	url
+	filename
+	isImage
+}

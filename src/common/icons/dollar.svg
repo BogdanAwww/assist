@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <style>
+            .aaa,.ddd{fill:none;}
+            .aaa{stroke:currentColor;stroke-width:2px;}
+            .bbb{fill:currentColor;font-size:18px;font-family:Raleway-SemiBold, Raleway;font-weight:600;}
+            .ccc{stroke:none;}
+        </style>
+    </defs>
+    <g transform="translate(-910 -3920)">
+        <g transform="translate(454.5 3616)">
+            <g class="aaa" transform="translate(455.5 304)">
+                <circle class="ccc" cx="16" cy="16" r="16"/>
+                <circle class="ddd" cx="16" cy="16" r="15"/>
+            </g>
+            <text class="bbb" transform="translate(466 326)">
+                <tspan x="0" y="0">$</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

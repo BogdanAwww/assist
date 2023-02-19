@@ -1,0 +1,9 @@
+query searchProjectsCount($filter: SearchProjectInput) {
+	searchProjectsCount(filter: $filter) {
+		total
+		before
+		inDay
+		after
+		whole
+	}
+}

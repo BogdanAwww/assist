@@ -1,0 +1,133 @@
+.background-main {
+	height: 100vh;
+	width: 100%;
+
+	@media (min-width: 813px) {
+		&__logo,
+		&__hand-left,
+		&__hand-right,
+		&__half-black,
+		&__red-dot,
+		&__pattern1,
+		&__pattern2 {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&__logo {
+			top: 30px;
+			left: 55px;
+			z-index: 2;
+		}
+
+		&__half-black {
+			width: 33%;
+			right: 0;
+			left: auto;
+			bottom: 0;
+			background-color: #000;
+		}
+
+		&__red-dot {
+			width: 5vw;
+			height: 5vw;
+			top: 25%;
+			left: 5.5%;
+
+			background-color: #f00;
+			border-radius: 100%;
+
+			transform: translate(-50%, 0);
+		}
+
+		&__hand-left {
+			top: 10%;
+			width: 18%;
+
+			&-inner {
+				background-image: url('./images/hand-left.png');
+				background-size: cover;
+			}
+		}
+
+		&__hand-right {
+			top: 25.7%;
+			left: auto;
+			right: 0;
+			width: 35%;
+
+			&-inner {
+				background-image: url('./images/hand-right.png');
+				background-size: cover;
+			}
+		}
+
+		&__pattern1 {
+			left: auto;
+			right: 33%;
+			width: 14.4%;
+			bottom: 0;
+			top: auto;
+			transform: translate(50%, 0);
+		}
+
+		&__pattern2 {
+			left: auto;
+			right: 0;
+			width: 4.6%;
+		}
+
+		&__pattern-inner {
+			background-image: url('./images/marble.png');
+			background-size: cover;
+		}
+
+		&__text1 {
+			position: absolute;
+			top: 20px;
+			right: 33%;
+			width: 255px;
+			padding-right: 26px;
+
+			text-align: right;
+			@include font-16-regular();
+			color: $color-red;
+		}
+
+		&__wrapper {
+			display: flex;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 67%;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	@media (max-width: 812px) {
+		&__hand-left,
+		&__hand-right,
+		&__half-black,
+		&__red-dot,
+		&__pattern1,
+		&__pattern2,
+		&__text1 {
+			display: none;
+		}
+
+		&__logo {
+			padding: 32px 0 16px;
+			text-align: center;
+		}
+
+		&__wrapper {
+			display: flex;
+			padding: 24px 16px;
+			justify-content: center;
+		}
+	}
+}

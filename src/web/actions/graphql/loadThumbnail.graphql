@@ -1,0 +1,6 @@
+query loadThumbnail($url: String) {
+	loadThumbnail(url: $url) {
+		thumbnail
+		iframe
+	}
+}

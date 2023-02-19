@@ -1,0 +1,7 @@
+.favorite-view {
+	@include link();
+
+	&._active {
+		color: $color-text-red;
+	}
+}

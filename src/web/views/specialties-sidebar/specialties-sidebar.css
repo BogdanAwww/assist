@@ -1,0 +1,53 @@
+.specialties-sidebar {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__title {
+		@include font-20-medium();
+	}
+
+	&__disclaimer {
+		@include font-14-regular();
+		color: $color-text-secondary;
+	}
+
+	&__groups {
+		margin-top: 48px;
+	}
+
+	&__group {
+		margin: 32px 0;
+
+		&-title {
+			@include font-16-regular();
+			color: $color-text-red;
+		}
+	}
+
+	&__specialties {
+		margin-top: 24px;
+	}
+
+	&__specialty {
+		display: inline-block;
+		margin-right: 8px;
+		margin-bottom: 8px;
+	}
+
+	&__search {
+		margin: 24px 0;
+	}
+
+	&__close {
+		padding: 4px;
+		@include link();
+	}
+
+	&__empty {
+		margin-top: 120px;
+		text-align: center;
+		color: $color-text-secondary;
+	}
+}

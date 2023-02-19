@@ -1,0 +1,5 @@
+.favorites-page {
+	&__list {
+		margin-top: 24px;
+	}
+}

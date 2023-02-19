@@ -1,0 +1,8 @@
+fragment PaginationInfo on PaginationInfo {
+	currentPage
+	perPage
+	itemCount
+	pageCount
+	hasPreviousPage
+	hasNextPage
+}

@@ -1,0 +1,7 @@
+#import "./fragments/city.graphql"
+
+query cities($countryId: String!) {
+	citiesByCountry(countryId: $countryId) {
+		...City
+	}
+}

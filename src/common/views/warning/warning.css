@@ -1,0 +1,51 @@
+.warning {
+	background-color: #f5f6f7;
+	border-radius: 4px;
+
+	&._with-icon {
+		display: flex;
+	}
+
+	b {
+		font-weight: bold;
+	}
+
+	&__icon:not(:empty) {
+		flex-shrink: 0;
+		margin-right: 8px;
+	}
+
+	&._success {
+		background-color: #dfffdf;
+		color: #004400;
+	}
+
+	&._warning {
+		background-color: #fff3cd;
+		color: #664d03;
+		/* color: #ffecb5; */
+	}
+
+	&._error {
+		background-color: #fff3f3;
+		color: $color-text-red;
+	}
+
+	&._margin {
+		margin: 16px 0;
+	}
+
+	&._size_xs {
+		padding: 6px 8px;
+	}
+
+	&._size_small {
+		padding: 12px 16px;
+		@include font-12-regular();
+	}
+
+	&._size_medium {
+		padding: 16px 16px;
+		@include font-14-regular();
+	}
+}

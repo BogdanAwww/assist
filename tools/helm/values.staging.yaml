@@ -1,0 +1,8 @@
+environment: staging
+
+staticReplicaCount: 1
+serverReplicaCount: 1
+
+versionWeb: 0.6.17
+versionServer: 0.6.17
+versionScheduler: 0.6.17

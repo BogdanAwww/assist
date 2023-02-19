@@ -1,0 +1,85 @@
+.contractor-view {
+	@include font-16-regular();
+	color: $color-text-primary;
+
+	&__head {
+		display: flex;
+		align-items: center;
+		margin-bottom: 24px;
+	}
+
+	&__additional {
+		align-self: flex-start;
+		flex-grow: 1;
+		flex-shrink: 0;
+		min-width: 24px;
+		text-align: right;
+		margin-top: 8px;
+	}
+
+	&__name {
+		margin-left: 16px;
+		@include font-16-medium();
+	}
+
+	&__block {
+		&:not(:empty) {
+			margin-top: 24px;
+			margin-bottom: 16px;
+		}
+
+		&-title {
+			margin-bottom: 4px;
+			color: $color-text-red;
+		}
+
+		&._description {
+			white-space: pre-wrap;
+		}
+	}
+
+	&__specialty {
+		margin: 8px 0;
+	}
+
+	&__location {
+		margin-top: 4px;
+	}
+
+	&__contact {
+		margin: 8px 0;
+	}
+
+	&__link {
+		@include link();
+	}
+
+	&__recommendations {
+		margin-top: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-list {
+		}
+
+		&-button {
+		}
+	}
+
+	&__badge {
+		margin-bottom: 8px;
+	}
+
+	&__actions {
+		display: flex;
+	}
+
+	&__invite {
+		flex-grow: 1;
+	}
+
+	&__message {
+		flex-grow: 0;
+	}
+}

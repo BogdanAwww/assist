@@ -1,0 +1,110 @@
+image: node:14.15.0-alpine
+
+stages:
+  - build
+  - deploy
+
+cache:
+  key:
+    files:
+      - package-lock.json
+    # prefix: ${CI_JOB_NAME}
+  paths:
+    - node_modules
+
+.build:
+  stage: build
+  script:
+    - npm install
+    - npm run test
+    - NODE_ENV=$ENV npm run build-server
+    - NODE_ENV=$ENV npm run build-web
+    - NODE_ENV=$ENV npm run build-admin
+  artifacts:
+    paths:
+      - build
+    expire_in: 1 hour
+
+build_staging:
+  variables:
+    ENV: staging
+  extends: .build
+  only:
+    - staging
+
+build_beta:
+  variables:
+    ENV: beta
+  extends: .build
+  only:
+    - beta
+
+.deploy:
+  image: node:8.9.0
+  cache: {}
+  before_script:
+    # Check for ssh-agent + rsync and install if not present
+    - "which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y  )"
+    - "which rsync || ( apt-get update -y && apt-get install rsync -y )"
+    - eval $(ssh-agent -s)
+    # Inject the remote's private key
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    # Append keyscan output into known hosts
+    - ssh-keyscan $SERVER_IP >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+
+.deploy_web:
+  stage: deploy
+  extends: .deploy
+  script:
+    - rsync -avuz --delete --exclude=".*" $CI_PROJECT_DIR/build/web/ $SERVER_USER@$SERVER_IP:/var/www/html
+    - rsync -avuz --delete --exclude=".*" $CI_PROJECT_DIR/build/admin/ $SERVER_USER@$SERVER_IP:/var/www/admin
+  when: on_success
+  only:
+    - staging
+    - beta
+
+.deploy_server:
+  stage: deploy
+  extends: .deploy
+  script:
+    - rsync -avuz --delete --exclude=".*" $CI_PROJECT_DIR/build/server/ $SERVER_USER@$SERVER_IP:/$SERVER_USER/assist/build/server
+    - ssh -o "StrictHostKeyChecking=no" $SERVER_USER@$SERVER_IP "cd assist; git pull; npm i; npm run migrate-database; pm2 restart app"
+  when: on_success
+  only:
+    - staging
+    - beta
+
+deploy_web_staging:
+  environment:
+    name: web-staging
+    url: https://staging.assist.video
+  extends: .deploy_web
+  only:
+    - staging
+
+deploy_server_staging:
+  environment:
+    name: server-staging
+    url: https://staging.assist.video
+  extends: .deploy_server
+  only:
+    - staging
+
+deploy_web_beta:
+  environment:
+    name: web-beta
+    url: https://beta.assist.video
+  extends: .deploy_web
+  only:
+    - beta
+
+deploy_server_beta:
+  environment:
+    name: server-beta
+    url: https://beta.assist.video
+  extends: .deploy_server
+  only:
+    - beta

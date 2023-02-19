@@ -1,0 +1,36 @@
+#import "./country.graphql"
+#import "./city.graphql"
+#import "./specialty.graphql"
+
+fragment Viewer on User {
+	_id
+	email
+	username
+	fullnessScore
+	description
+	firstName
+	lastName
+	fullName
+	avatar {
+		_id
+		urlTemplate
+	}
+	city {
+		...City
+	}
+	country {
+		...Country
+	}
+	website
+	phone
+	specialties {
+		...Specialty
+	}
+	hideContacts
+	busy
+	subscription {
+		level
+		end
+	}
+	modals
+}

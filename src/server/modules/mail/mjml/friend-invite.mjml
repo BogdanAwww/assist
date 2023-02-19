@@ -1,0 +1,19 @@
+<mjml>
+	<mj-head>
+		<mj-title>Assist</mj-title>
+		<mj-attributes>
+			<mj-all font-family="Montserrat, Helvetica, Arial, sans-serif"></mj-all>
+			<mj-text font-size="14px" color="#000000" line-height="24px"></mj-text>
+		</mj-attributes>
+	</mj-head>
+	<mj-body background-color="#F2F2F2">
+		<mj-include path="./templates/header.mjml" />
+		<mj-section padding="20px 0px 20px 0" background-color="#FFFFFF">
+			<mj-column width="100%" padding="0 30px 0 30px">
+				<mj-text>{{fullName}} приглашает вас присоединится к проекту "Assist".</mj-text>
+				<mj-text>Перейдите по <a href="{{link}}">ссылке</a> чтобы принять участие.</mj-text>
+			</mj-column>
+		</mj-section>
+		<mj-include path="./templates/footer.mjml" />
+	</mj-body>
+</mjml>

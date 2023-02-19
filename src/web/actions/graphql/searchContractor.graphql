@@ -1,0 +1,19 @@
+#import "./fragments/shortUser.graphql"
+#import "./fragments/paginationInfo.graphql"
+#import "./fragments/specialty.graphql"
+
+query searchContractor($filter: SearchContractorInput!, $page: Int, $perPage: Int) {
+	searchContractor(filter: $filter, page: $page, perPage: $perPage) {
+		items {
+			...ShortUser
+			specialties {
+				...Specialty
+			}
+			isFavorite
+		}
+		count
+		pageInfo {
+			...PaginationInfo
+		}
+	}
+}
